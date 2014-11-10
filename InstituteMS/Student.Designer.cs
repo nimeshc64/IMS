@@ -31,7 +31,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.StuAprint = new System.Windows.Forms.Button();
+            this.StuAqrpic = new System.Windows.Forms.PictureBox();
+            this.StuAgridviwe = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,28 +41,28 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.StuAstupic = new System.Windows.Forms.PictureBox();
+            this.StuAfemale = new System.Windows.Forms.RadioButton();
+            this.StuAmale = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.StuAsearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.StuAdeletebtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.StuAupdatebtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.StuAsavebtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.StuAcontact = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.StuAadd3 = new System.Windows.Forms.TextBox();
+            this.StuAid = new System.Windows.Forms.TextBox();
+            this.StuAadd2 = new System.Windows.Forms.TextBox();
+            this.StuAfname = new System.Windows.Forms.TextBox();
+            this.StuAadd1 = new System.Windows.Forms.TextBox();
+            this.StuAlname = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -106,12 +108,12 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.stubtnprint = new System.Windows.Forms.Button();
+            this.StuAsearchbutton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAqrpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAgridviwe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,7 +124,6 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -152,31 +153,32 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.stubtnprint);
-            this.tabPage1.Controls.Add(this.pictureBox4);
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.radioButton2);
-            this.tabPage1.Controls.Add(this.radioButton1);
+            this.tabPage1.Controls.Add(this.StuAsearchbutton);
+            this.tabPage1.Controls.Add(this.StuAprint);
+            this.tabPage1.Controls.Add(this.StuAqrpic);
+            this.tabPage1.Controls.Add(this.StuAgridviwe);
+            this.tabPage1.Controls.Add(this.StuAstupic);
+            this.tabPage1.Controls.Add(this.StuAfemale);
+            this.tabPage1.Controls.Add(this.StuAmale);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.StuAsearch);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.StuAdeletebtn);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.StuAupdatebtn);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.StuAsavebtn);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.StuAcontact);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.StuAadd3);
+            this.tabPage1.Controls.Add(this.StuAid);
+            this.tabPage1.Controls.Add(this.StuAadd2);
+            this.tabPage1.Controls.Add(this.StuAfname);
+            this.tabPage1.Controls.Add(this.StuAadd1);
+            this.tabPage1.Controls.Add(this.StuAlname);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -184,11 +186,33 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
             // 
-            // dataGridView2
+            // StuAprint
             // 
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StuAprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuAprint.FlatAppearance.BorderSize = 0;
+            this.StuAprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAprint.ForeColor = System.Drawing.Color.White;
+            this.StuAprint.Location = new System.Drawing.Point(375, 223);
+            this.StuAprint.Name = "StuAprint";
+            this.StuAprint.Size = new System.Drawing.Size(71, 36);
+            this.StuAprint.TabIndex = 48;
+            this.StuAprint.Text = "Print";
+            this.StuAprint.UseVisualStyleBackColor = false;
+            // 
+            // StuAqrpic
+            // 
+            this.StuAqrpic.Location = new System.Drawing.Point(384, 92);
+            this.StuAqrpic.Name = "StuAqrpic";
+            this.StuAqrpic.Size = new System.Drawing.Size(130, 125);
+            this.StuAqrpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StuAqrpic.TabIndex = 47;
+            this.StuAqrpic.TabStop = false;
+            // 
+            // StuAgridviwe
+            // 
+            this.StuAgridviwe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StuAgridviwe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StuAgridviwe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -196,10 +220,10 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView2.Location = new System.Drawing.Point(59, 296);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(734, 171);
-            this.dataGridView2.TabIndex = 46;
+            this.StuAgridviwe.Location = new System.Drawing.Point(59, 296);
+            this.StuAgridviwe.Name = "StuAgridviwe";
+            this.StuAgridviwe.Size = new System.Drawing.Size(734, 171);
+            this.StuAgridviwe.TabIndex = 46;
             // 
             // Column1
             // 
@@ -236,37 +260,37 @@
             this.Column7.HeaderText = "EndTime";
             this.Column7.Name = "Column7";
             // 
-            // pictureBox2
+            // StuAstupic
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(626, 92);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(157, 183);
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
+            this.StuAstupic.Location = new System.Drawing.Point(626, 92);
+            this.StuAstupic.Name = "StuAstupic";
+            this.StuAstupic.Size = new System.Drawing.Size(157, 183);
+            this.StuAstupic.TabIndex = 45;
+            this.StuAstupic.TabStop = false;
             // 
-            // radioButton2
+            // StuAfemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(715, 59);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 27);
-            this.radioButton2.TabIndex = 44;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.StuAfemale.AutoSize = true;
+            this.StuAfemale.ForeColor = System.Drawing.Color.White;
+            this.StuAfemale.Location = new System.Drawing.Point(715, 59);
+            this.StuAfemale.Name = "StuAfemale";
+            this.StuAfemale.Size = new System.Drawing.Size(78, 27);
+            this.StuAfemale.TabIndex = 44;
+            this.StuAfemale.TabStop = true;
+            this.StuAfemale.Text = "Female";
+            this.StuAfemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // StuAmale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(620, 59);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(64, 27);
-            this.radioButton1.TabIndex = 43;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.StuAmale.AutoSize = true;
+            this.StuAmale.ForeColor = System.Drawing.Color.White;
+            this.StuAmale.Location = new System.Drawing.Point(620, 59);
+            this.StuAmale.Name = "StuAmale";
+            this.StuAmale.Size = new System.Drawing.Size(64, 27);
+            this.StuAmale.TabIndex = 43;
+            this.StuAmale.TabStop = true;
+            this.StuAmale.Text = "Male";
+            this.StuAmale.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -279,18 +303,18 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "First Name";
             // 
-            // button4
+            // StuAsearch
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(230, 38);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(57, 26);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "search";
-            this.button4.UseVisualStyleBackColor = false;
+            this.StuAsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuAsearch.FlatAppearance.BorderSize = 0;
+            this.StuAsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAsearch.ForeColor = System.Drawing.Color.White;
+            this.StuAsearch.Location = new System.Drawing.Point(230, 38);
+            this.StuAsearch.Name = "StuAsearch";
+            this.StuAsearch.Size = new System.Drawing.Size(73, 26);
+            this.StuAsearch.TabIndex = 42;
+            this.StuAsearch.Text = "search";
+            this.StuAsearch.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -325,18 +349,18 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Address Line1";
             // 
-            // button3
+            // StuAdeletebtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(791, 486);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 40);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.StuAdeletebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuAdeletebtn.FlatAppearance.BorderSize = 0;
+            this.StuAdeletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAdeletebtn.ForeColor = System.Drawing.Color.White;
+            this.StuAdeletebtn.Location = new System.Drawing.Point(791, 486);
+            this.StuAdeletebtn.Name = "StuAdeletebtn";
+            this.StuAdeletebtn.Size = new System.Drawing.Size(111, 40);
+            this.StuAdeletebtn.TabIndex = 41;
+            this.StuAdeletebtn.Text = "Delete";
+            this.StuAdeletebtn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -349,18 +373,18 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Contact";
             // 
-            // button2
+            // StuAupdatebtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(654, 486);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 40);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.StuAupdatebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuAupdatebtn.FlatAppearance.BorderSize = 0;
+            this.StuAupdatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAupdatebtn.ForeColor = System.Drawing.Color.White;
+            this.StuAupdatebtn.Location = new System.Drawing.Point(654, 486);
+            this.StuAupdatebtn.Name = "StuAupdatebtn";
+            this.StuAupdatebtn.Size = new System.Drawing.Size(111, 40);
+            this.StuAupdatebtn.TabIndex = 40;
+            this.StuAupdatebtn.Text = "Update";
+            this.StuAupdatebtn.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -373,18 +397,18 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Address Line2";
             // 
-            // button1
+            // StuAsavebtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(520, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 40);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.StuAsavebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuAsavebtn.FlatAppearance.BorderSize = 0;
+            this.StuAsavebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAsavebtn.ForeColor = System.Drawing.Color.White;
+            this.StuAsavebtn.Location = new System.Drawing.Point(520, 486);
+            this.StuAsavebtn.Name = "StuAsavebtn";
+            this.StuAsavebtn.Size = new System.Drawing.Size(111, 40);
+            this.StuAsavebtn.TabIndex = 39;
+            this.StuAsavebtn.Text = "Save";
+            this.StuAsavebtn.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -397,13 +421,13 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Address Line3";
             // 
-            // textBox7
+            // StuAcontact
             // 
-            this.textBox7.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox7.Location = new System.Drawing.Point(620, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 26);
-            this.textBox7.TabIndex = 38;
+            this.StuAcontact.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAcontact.Location = new System.Drawing.Point(620, 19);
+            this.StuAcontact.Name = "StuAcontact";
+            this.StuAcontact.Size = new System.Drawing.Size(173, 26);
+            this.StuAcontact.TabIndex = 38;
             // 
             // label8
             // 
@@ -416,53 +440,54 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Gender";
             // 
-            // textBox6
+            // StuAadd3
             // 
-            this.textBox6.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox6.Location = new System.Drawing.Point(150, 220);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 26);
-            this.textBox6.TabIndex = 37;
+            this.StuAadd3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAadd3.Location = new System.Drawing.Point(150, 220);
+            this.StuAadd3.Name = "StuAadd3";
+            this.StuAadd3.Size = new System.Drawing.Size(183, 26);
+            this.StuAadd3.TabIndex = 37;
             // 
-            // textBox1
+            // StuAid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox1.Location = new System.Drawing.Point(149, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(59, 26);
-            this.textBox1.TabIndex = 32;
+            this.StuAid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAid.Location = new System.Drawing.Point(149, 37);
+            this.StuAid.Name = "StuAid";
+            this.StuAid.Size = new System.Drawing.Size(59, 26);
+            this.StuAid.TabIndex = 32;
+            this.StuAid.TextChanged += new System.EventHandler(this.StuAid_TextChanged);
             // 
-            // textBox5
+            // StuAadd2
             // 
-            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox5.Location = new System.Drawing.Point(149, 184);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 26);
-            this.textBox5.TabIndex = 36;
+            this.StuAadd2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAadd2.Location = new System.Drawing.Point(149, 184);
+            this.StuAadd2.Name = "StuAadd2";
+            this.StuAadd2.Size = new System.Drawing.Size(183, 26);
+            this.StuAadd2.TabIndex = 36;
             // 
-            // textBox2
+            // StuAfname
             // 
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox2.Location = new System.Drawing.Point(149, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 33;
+            this.StuAfname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAfname.Location = new System.Drawing.Point(149, 78);
+            this.StuAfname.Name = "StuAfname";
+            this.StuAfname.Size = new System.Drawing.Size(183, 26);
+            this.StuAfname.TabIndex = 33;
             // 
-            // textBox4
+            // StuAadd1
             // 
-            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox4.Location = new System.Drawing.Point(149, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 26);
-            this.textBox4.TabIndex = 35;
+            this.StuAadd1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAadd1.Location = new System.Drawing.Point(149, 149);
+            this.StuAadd1.Name = "StuAadd1";
+            this.StuAadd1.Size = new System.Drawing.Size(183, 26);
+            this.StuAadd1.TabIndex = 35;
             // 
-            // textBox3
+            // StuAlname
             // 
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox3.Location = new System.Drawing.Point(149, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 26);
-            this.textBox3.TabIndex = 34;
+            this.StuAlname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAlname.Location = new System.Drawing.Point(149, 114);
+            this.StuAlname.Name = "StuAlname";
+            this.StuAlname.Size = new System.Drawing.Size(183, 26);
+            this.StuAlname.TabIndex = 34;
             // 
             // tabPage2
             // 
@@ -906,26 +931,18 @@
             this.button7.TabIndex = 22;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // pictureBox4
+            // StuAsearchbutton
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(382, 149);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(132, 97);
-            this.pictureBox4.TabIndex = 47;
-            this.pictureBox4.TabStop = false;
-            // 
-            // stubtnprint
-            // 
-            this.stubtnprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.stubtnprint.FlatAppearance.BorderSize = 0;
-            this.stubtnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stubtnprint.ForeColor = System.Drawing.Color.White;
-            this.stubtnprint.Location = new System.Drawing.Point(416, 254);
-            this.stubtnprint.Name = "stubtnprint";
-            this.stubtnprint.Size = new System.Drawing.Size(71, 36);
-            this.stubtnprint.TabIndex = 48;
-            this.stubtnprint.Text = "Print";
-            this.stubtnprint.UseVisualStyleBackColor = false;
+            this.StuAsearchbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuAsearchbutton.FlatAppearance.BorderSize = 0;
+            this.StuAsearchbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAsearchbutton.ForeColor = System.Drawing.Color.White;
+            this.StuAsearchbutton.Location = new System.Drawing.Point(452, 223);
+            this.StuAsearchbutton.Name = "StuAsearchbutton";
+            this.StuAsearchbutton.Size = new System.Drawing.Size(71, 36);
+            this.StuAsearchbutton.TabIndex = 49;
+            this.StuAsearchbutton.Text = "search";
+            this.StuAsearchbutton.UseVisualStyleBackColor = false;
             // 
             // Student
             // 
@@ -941,8 +958,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAqrpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAgridviwe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -958,7 +976,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -968,27 +985,27 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton StuAfemale;
+        private System.Windows.Forms.RadioButton StuAmale;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button StuAsearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button StuAdeletebtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button StuAupdatebtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button StuAsavebtn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox StuAcontact;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox StuAadd3;
+        private System.Windows.Forms.TextBox StuAid;
+        private System.Windows.Forms.TextBox StuAadd2;
+        private System.Windows.Forms.TextBox StuAfname;
+        private System.Windows.Forms.TextBox StuAadd1;
+        private System.Windows.Forms.TextBox StuAlname;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -1013,13 +1030,13 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox StuAstupic;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView StuAgridviwe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1043,7 +1060,8 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Button stubtnprint;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button StuAprint;
+        private System.Windows.Forms.PictureBox StuAqrpic;
+        private System.Windows.Forms.Button StuAsearchbutton;
     }
 }
