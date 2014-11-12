@@ -22,16 +22,7 @@ namespace InstituteMS
         TeachersPayments teaPay = new TeachersPayments();
         private void button1_Click(object sender, EventArgs e)
         {
-            //tea.teaID =int.Parse( teaID.Text);
-            //tea.teaFName = teaFName.Text;
-            //tea.teaLName = teaLName.Text;
-            //tea.teaContact = teaContact.Text;
-            //tea.teaNIC = teaNIC.Text;
-            //tea.teaAdd1 = teaAdd1.Text;
-            //tea.teaAdd2 = teaAdd2.Text;
-            //tea.teaAdd3 = teaAdd3.Text;
-            //tea.teaEmail = teaEmail.Text;
-            //tea.teaSubject = teaSubject.Text;
+
             setTextBoxValues();
             tea.RegisterTeacher();
 
