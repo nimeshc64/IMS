@@ -36,6 +36,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LibraryFile\AForge.dll</HintPath>
     </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL" />
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b" />
     <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LibraryFile\AForge.Video.dll</HintPath>
@@ -66,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ALstudents.cs" />
     <Compile Include="Classes.cs" />
     <Compile Include="CommonClass.cs" />
     <Compile Include="DBConnect.cs" />
@@ -110,6 +113,8 @@
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentPayments.cs" />
+    <Compile Include="Students.cs" />
     <Compile Include="Teacher.cs">
       <SubType>Form</SubType>
     </Compile>

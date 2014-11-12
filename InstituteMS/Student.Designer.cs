@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.StuAprint = new System.Windows.Forms.Button();
-            this.StuAqrpic = new System.Windows.Forms.PictureBox();
-            this.StuAgridviwe = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.StuRqrsave = new System.Windows.Forms.Button();
+            this.StuRprint = new System.Windows.Forms.Button();
+            this.StuRqrpic = new System.Windows.Forms.PictureBox();
+            this.StuRgridviwe = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,47 +44,49 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StuAstupic = new System.Windows.Forms.PictureBox();
-            this.StuAfemale = new System.Windows.Forms.RadioButton();
-            this.StuAmale = new System.Windows.Forms.RadioButton();
+            this.StuRstupic = new System.Windows.Forms.PictureBox();
+            this.StuRfemale = new System.Windows.Forms.RadioButton();
+            this.StuRmale = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.StuAsearch = new System.Windows.Forms.Button();
+            this.StuRsearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.StuAdeletebtn = new System.Windows.Forms.Button();
+            this.StuRdeletebtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.StuAupdatebtn = new System.Windows.Forms.Button();
+            this.StuRupdatebtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.StuAsavebtn = new System.Windows.Forms.Button();
+            this.StuRsavebtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.StuAcontact = new System.Windows.Forms.TextBox();
+            this.StuRcontact = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.StuAadd3 = new System.Windows.Forms.TextBox();
-            this.StuAid = new System.Windows.Forms.TextBox();
-            this.StuAadd2 = new System.Windows.Forms.TextBox();
-            this.StuAfname = new System.Windows.Forms.TextBox();
-            this.StuAadd1 = new System.Windows.Forms.TextBox();
-            this.StuAlname = new System.Windows.Forms.TextBox();
+            this.StuRadd3 = new System.Windows.Forms.TextBox();
+            this.StuRid = new System.Windows.Forms.TextBox();
+            this.StuRadd2 = new System.Windows.Forms.TextBox();
+            this.StuRfname = new System.Windows.Forms.TextBox();
+            this.StuRadd1 = new System.Windows.Forms.TextBox();
+            this.StuRlname = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.StuAclass = new System.Windows.Forms.ComboBox();
+            this.StuAstupic = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.StuAsatus = new System.Windows.Forms.Label();
+            this.StuAstuid = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.StuAvideoPlayer = new AForge.Controls.VideoSourcePlayer();
+            this.StuAcamdevices = new System.Windows.Forms.ComboBox();
+            this.StuAStart = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.StuAstop = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.StuPsearch = new System.Windows.Forms.Button();
+            this.StuPmonth = new System.Windows.Forms.ComboBox();
+            this.StuPsave = new System.Windows.Forms.Button();
+            this.StuPgrid = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,15 +95,15 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.StuPfees = new System.Windows.Forms.TextBox();
+            this.Stuppic = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.StuPname = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.StuPid = new System.Windows.Forms.TextBox();
+            this.StuPyear = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
@@ -108,19 +113,21 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.StuAsearchbutton = new System.Windows.Forms.Button();
+            this.StuAtimer = new System.Windows.Forms.Timer(this.components);
+            this.StuApaynow = new System.Windows.Forms.Button();
+            this.StuAcancel = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StuAqrpic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StuAgridviwe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRqrpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRgridviwe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRstupic)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuPgrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stuppic)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -153,32 +160,33 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.StuAsearchbutton);
-            this.tabPage1.Controls.Add(this.StuAprint);
-            this.tabPage1.Controls.Add(this.StuAqrpic);
-            this.tabPage1.Controls.Add(this.StuAgridviwe);
-            this.tabPage1.Controls.Add(this.StuAstupic);
-            this.tabPage1.Controls.Add(this.StuAfemale);
-            this.tabPage1.Controls.Add(this.StuAmale);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.StuRqrsave);
+            this.tabPage1.Controls.Add(this.StuRprint);
+            this.tabPage1.Controls.Add(this.StuRqrpic);
+            this.tabPage1.Controls.Add(this.StuRgridviwe);
+            this.tabPage1.Controls.Add(this.StuRstupic);
+            this.tabPage1.Controls.Add(this.StuRfemale);
+            this.tabPage1.Controls.Add(this.StuRmale);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.StuAsearch);
+            this.tabPage1.Controls.Add(this.StuRsearch);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.StuAdeletebtn);
+            this.tabPage1.Controls.Add(this.StuRdeletebtn);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.StuAupdatebtn);
+            this.tabPage1.Controls.Add(this.StuRupdatebtn);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.StuAsavebtn);
+            this.tabPage1.Controls.Add(this.StuRsavebtn);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.StuAcontact);
+            this.tabPage1.Controls.Add(this.StuRcontact);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.StuAadd3);
-            this.tabPage1.Controls.Add(this.StuAid);
-            this.tabPage1.Controls.Add(this.StuAadd2);
-            this.tabPage1.Controls.Add(this.StuAfname);
-            this.tabPage1.Controls.Add(this.StuAadd1);
-            this.tabPage1.Controls.Add(this.StuAlname);
+            this.tabPage1.Controls.Add(this.StuRadd3);
+            this.tabPage1.Controls.Add(this.StuRid);
+            this.tabPage1.Controls.Add(this.StuRadd2);
+            this.tabPage1.Controls.Add(this.StuRfname);
+            this.tabPage1.Controls.Add(this.StuRadd1);
+            this.tabPage1.Controls.Add(this.StuRlname);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -186,33 +194,62 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
             // 
-            // StuAprint
+            // button1
             // 
-            this.StuAprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.StuAprint.FlatAppearance.BorderSize = 0;
-            this.StuAprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StuAprint.ForeColor = System.Drawing.Color.White;
-            this.StuAprint.Location = new System.Drawing.Point(375, 223);
-            this.StuAprint.Name = "StuAprint";
-            this.StuAprint.Size = new System.Drawing.Size(71, 36);
-            this.StuAprint.TabIndex = 48;
-            this.StuAprint.Text = "Print";
-            this.StuAprint.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(794, 168);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 49);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "open";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // StuAqrpic
+            // StuRqrsave
             // 
-            this.StuAqrpic.Location = new System.Drawing.Point(384, 92);
-            this.StuAqrpic.Name = "StuAqrpic";
-            this.StuAqrpic.Size = new System.Drawing.Size(130, 125);
-            this.StuAqrpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.StuAqrpic.TabIndex = 47;
-            this.StuAqrpic.TabStop = false;
+            this.StuRqrsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuRqrsave.FlatAppearance.BorderSize = 0;
+            this.StuRqrsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuRqrsave.ForeColor = System.Drawing.Color.White;
+            this.StuRqrsave.Location = new System.Drawing.Point(452, 223);
+            this.StuRqrsave.Name = "StuRqrsave";
+            this.StuRqrsave.Size = new System.Drawing.Size(71, 36);
+            this.StuRqrsave.TabIndex = 49;
+            this.StuRqrsave.Text = "Save";
+            this.StuRqrsave.UseVisualStyleBackColor = false;
+            this.StuRqrsave.Click += new System.EventHandler(this.StuAqrsave_Click);
             // 
-            // StuAgridviwe
+            // StuRprint
             // 
-            this.StuAgridviwe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StuAgridviwe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StuAgridviwe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StuRprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuRprint.FlatAppearance.BorderSize = 0;
+            this.StuRprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuRprint.ForeColor = System.Drawing.Color.White;
+            this.StuRprint.Location = new System.Drawing.Point(375, 223);
+            this.StuRprint.Name = "StuRprint";
+            this.StuRprint.Size = new System.Drawing.Size(71, 36);
+            this.StuRprint.TabIndex = 48;
+            this.StuRprint.Text = "Print";
+            this.StuRprint.UseVisualStyleBackColor = false;
+            this.StuRprint.Click += new System.EventHandler(this.StuAprint_Click);
+            // 
+            // StuRqrpic
+            // 
+            this.StuRqrpic.Location = new System.Drawing.Point(384, 92);
+            this.StuRqrpic.Name = "StuRqrpic";
+            this.StuRqrpic.Size = new System.Drawing.Size(130, 125);
+            this.StuRqrpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StuRqrpic.TabIndex = 47;
+            this.StuRqrpic.TabStop = false;
+            // 
+            // StuRgridviwe
+            // 
+            this.StuRgridviwe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StuRgridviwe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StuRgridviwe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -220,10 +257,10 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.StuAgridviwe.Location = new System.Drawing.Point(59, 296);
-            this.StuAgridviwe.Name = "StuAgridviwe";
-            this.StuAgridviwe.Size = new System.Drawing.Size(734, 171);
-            this.StuAgridviwe.TabIndex = 46;
+            this.StuRgridviwe.Location = new System.Drawing.Point(59, 296);
+            this.StuRgridviwe.Name = "StuRgridviwe";
+            this.StuRgridviwe.Size = new System.Drawing.Size(734, 171);
+            this.StuRgridviwe.TabIndex = 46;
             // 
             // Column1
             // 
@@ -260,37 +297,38 @@
             this.Column7.HeaderText = "EndTime";
             this.Column7.Name = "Column7";
             // 
-            // StuAstupic
+            // StuRstupic
             // 
-            this.StuAstupic.Location = new System.Drawing.Point(626, 92);
-            this.StuAstupic.Name = "StuAstupic";
-            this.StuAstupic.Size = new System.Drawing.Size(157, 183);
-            this.StuAstupic.TabIndex = 45;
-            this.StuAstupic.TabStop = false;
+            this.StuRstupic.Location = new System.Drawing.Point(626, 92);
+            this.StuRstupic.Name = "StuRstupic";
+            this.StuRstupic.Size = new System.Drawing.Size(157, 183);
+            this.StuRstupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StuRstupic.TabIndex = 45;
+            this.StuRstupic.TabStop = false;
             // 
-            // StuAfemale
+            // StuRfemale
             // 
-            this.StuAfemale.AutoSize = true;
-            this.StuAfemale.ForeColor = System.Drawing.Color.White;
-            this.StuAfemale.Location = new System.Drawing.Point(715, 59);
-            this.StuAfemale.Name = "StuAfemale";
-            this.StuAfemale.Size = new System.Drawing.Size(78, 27);
-            this.StuAfemale.TabIndex = 44;
-            this.StuAfemale.TabStop = true;
-            this.StuAfemale.Text = "Female";
-            this.StuAfemale.UseVisualStyleBackColor = true;
+            this.StuRfemale.AutoSize = true;
+            this.StuRfemale.ForeColor = System.Drawing.Color.White;
+            this.StuRfemale.Location = new System.Drawing.Point(715, 59);
+            this.StuRfemale.Name = "StuRfemale";
+            this.StuRfemale.Size = new System.Drawing.Size(78, 27);
+            this.StuRfemale.TabIndex = 44;
+            this.StuRfemale.TabStop = true;
+            this.StuRfemale.Text = "Female";
+            this.StuRfemale.UseVisualStyleBackColor = true;
             // 
-            // StuAmale
+            // StuRmale
             // 
-            this.StuAmale.AutoSize = true;
-            this.StuAmale.ForeColor = System.Drawing.Color.White;
-            this.StuAmale.Location = new System.Drawing.Point(620, 59);
-            this.StuAmale.Name = "StuAmale";
-            this.StuAmale.Size = new System.Drawing.Size(64, 27);
-            this.StuAmale.TabIndex = 43;
-            this.StuAmale.TabStop = true;
-            this.StuAmale.Text = "Male";
-            this.StuAmale.UseVisualStyleBackColor = true;
+            this.StuRmale.AutoSize = true;
+            this.StuRmale.ForeColor = System.Drawing.Color.White;
+            this.StuRmale.Location = new System.Drawing.Point(620, 59);
+            this.StuRmale.Name = "StuRmale";
+            this.StuRmale.Size = new System.Drawing.Size(64, 27);
+            this.StuRmale.TabIndex = 43;
+            this.StuRmale.TabStop = true;
+            this.StuRmale.Text = "Male";
+            this.StuRmale.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -303,18 +341,19 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "First Name";
             // 
-            // StuAsearch
+            // StuRsearch
             // 
-            this.StuAsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.StuAsearch.FlatAppearance.BorderSize = 0;
-            this.StuAsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StuAsearch.ForeColor = System.Drawing.Color.White;
-            this.StuAsearch.Location = new System.Drawing.Point(230, 38);
-            this.StuAsearch.Name = "StuAsearch";
-            this.StuAsearch.Size = new System.Drawing.Size(73, 26);
-            this.StuAsearch.TabIndex = 42;
-            this.StuAsearch.Text = "search";
-            this.StuAsearch.UseVisualStyleBackColor = false;
+            this.StuRsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuRsearch.FlatAppearance.BorderSize = 0;
+            this.StuRsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuRsearch.ForeColor = System.Drawing.Color.White;
+            this.StuRsearch.Location = new System.Drawing.Point(230, 32);
+            this.StuRsearch.Name = "StuRsearch";
+            this.StuRsearch.Size = new System.Drawing.Size(73, 34);
+            this.StuRsearch.TabIndex = 42;
+            this.StuRsearch.Text = "search";
+            this.StuRsearch.UseVisualStyleBackColor = false;
+            this.StuRsearch.Click += new System.EventHandler(this.StuAsearch_Click);
             // 
             // label1
             // 
@@ -349,18 +388,19 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Address Line1";
             // 
-            // StuAdeletebtn
+            // StuRdeletebtn
             // 
-            this.StuAdeletebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.StuAdeletebtn.FlatAppearance.BorderSize = 0;
-            this.StuAdeletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StuAdeletebtn.ForeColor = System.Drawing.Color.White;
-            this.StuAdeletebtn.Location = new System.Drawing.Point(791, 486);
-            this.StuAdeletebtn.Name = "StuAdeletebtn";
-            this.StuAdeletebtn.Size = new System.Drawing.Size(111, 40);
-            this.StuAdeletebtn.TabIndex = 41;
-            this.StuAdeletebtn.Text = "Delete";
-            this.StuAdeletebtn.UseVisualStyleBackColor = false;
+            this.StuRdeletebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuRdeletebtn.FlatAppearance.BorderSize = 0;
+            this.StuRdeletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuRdeletebtn.ForeColor = System.Drawing.Color.White;
+            this.StuRdeletebtn.Location = new System.Drawing.Point(791, 486);
+            this.StuRdeletebtn.Name = "StuRdeletebtn";
+            this.StuRdeletebtn.Size = new System.Drawing.Size(111, 40);
+            this.StuRdeletebtn.TabIndex = 41;
+            this.StuRdeletebtn.Text = "Delete";
+            this.StuRdeletebtn.UseVisualStyleBackColor = false;
+            this.StuRdeletebtn.Click += new System.EventHandler(this.StuAdeletebtn_Click);
             // 
             // label5
             // 
@@ -373,18 +413,19 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Contact";
             // 
-            // StuAupdatebtn
+            // StuRupdatebtn
             // 
-            this.StuAupdatebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.StuAupdatebtn.FlatAppearance.BorderSize = 0;
-            this.StuAupdatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StuAupdatebtn.ForeColor = System.Drawing.Color.White;
-            this.StuAupdatebtn.Location = new System.Drawing.Point(654, 486);
-            this.StuAupdatebtn.Name = "StuAupdatebtn";
-            this.StuAupdatebtn.Size = new System.Drawing.Size(111, 40);
-            this.StuAupdatebtn.TabIndex = 40;
-            this.StuAupdatebtn.Text = "Update";
-            this.StuAupdatebtn.UseVisualStyleBackColor = false;
+            this.StuRupdatebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuRupdatebtn.FlatAppearance.BorderSize = 0;
+            this.StuRupdatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuRupdatebtn.ForeColor = System.Drawing.Color.White;
+            this.StuRupdatebtn.Location = new System.Drawing.Point(654, 486);
+            this.StuRupdatebtn.Name = "StuRupdatebtn";
+            this.StuRupdatebtn.Size = new System.Drawing.Size(111, 40);
+            this.StuRupdatebtn.TabIndex = 40;
+            this.StuRupdatebtn.Text = "Update";
+            this.StuRupdatebtn.UseVisualStyleBackColor = false;
+            this.StuRupdatebtn.Click += new System.EventHandler(this.StuAupdatebtn_Click);
             // 
             // label6
             // 
@@ -397,18 +438,19 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Address Line2";
             // 
-            // StuAsavebtn
+            // StuRsavebtn
             // 
-            this.StuAsavebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.StuAsavebtn.FlatAppearance.BorderSize = 0;
-            this.StuAsavebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StuAsavebtn.ForeColor = System.Drawing.Color.White;
-            this.StuAsavebtn.Location = new System.Drawing.Point(520, 486);
-            this.StuAsavebtn.Name = "StuAsavebtn";
-            this.StuAsavebtn.Size = new System.Drawing.Size(111, 40);
-            this.StuAsavebtn.TabIndex = 39;
-            this.StuAsavebtn.Text = "Save";
-            this.StuAsavebtn.UseVisualStyleBackColor = false;
+            this.StuRsavebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuRsavebtn.FlatAppearance.BorderSize = 0;
+            this.StuRsavebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuRsavebtn.ForeColor = System.Drawing.Color.White;
+            this.StuRsavebtn.Location = new System.Drawing.Point(520, 486);
+            this.StuRsavebtn.Name = "StuRsavebtn";
+            this.StuRsavebtn.Size = new System.Drawing.Size(111, 40);
+            this.StuRsavebtn.TabIndex = 39;
+            this.StuRsavebtn.Text = "Save";
+            this.StuRsavebtn.UseVisualStyleBackColor = false;
+            this.StuRsavebtn.Click += new System.EventHandler(this.StuAsavebtn_Click);
             // 
             // label7
             // 
@@ -421,13 +463,13 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Address Line3";
             // 
-            // StuAcontact
+            // StuRcontact
             // 
-            this.StuAcontact.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAcontact.Location = new System.Drawing.Point(620, 19);
-            this.StuAcontact.Name = "StuAcontact";
-            this.StuAcontact.Size = new System.Drawing.Size(173, 26);
-            this.StuAcontact.TabIndex = 38;
+            this.StuRcontact.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRcontact.Location = new System.Drawing.Point(620, 19);
+            this.StuRcontact.Name = "StuRcontact";
+            this.StuRcontact.Size = new System.Drawing.Size(173, 26);
+            this.StuRcontact.TabIndex = 38;
             // 
             // label8
             // 
@@ -440,54 +482,54 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Gender";
             // 
-            // StuAadd3
+            // StuRadd3
             // 
-            this.StuAadd3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAadd3.Location = new System.Drawing.Point(150, 220);
-            this.StuAadd3.Name = "StuAadd3";
-            this.StuAadd3.Size = new System.Drawing.Size(183, 26);
-            this.StuAadd3.TabIndex = 37;
+            this.StuRadd3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRadd3.Location = new System.Drawing.Point(150, 220);
+            this.StuRadd3.Name = "StuRadd3";
+            this.StuRadd3.Size = new System.Drawing.Size(183, 26);
+            this.StuRadd3.TabIndex = 37;
             // 
-            // StuAid
+            // StuRid
             // 
-            this.StuAid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAid.Location = new System.Drawing.Point(149, 37);
-            this.StuAid.Name = "StuAid";
-            this.StuAid.Size = new System.Drawing.Size(59, 26);
-            this.StuAid.TabIndex = 32;
-            this.StuAid.TextChanged += new System.EventHandler(this.StuAid_TextChanged);
+            this.StuRid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRid.Location = new System.Drawing.Point(149, 37);
+            this.StuRid.Name = "StuRid";
+            this.StuRid.Size = new System.Drawing.Size(59, 26);
+            this.StuRid.TabIndex = 32;
+            this.StuRid.TextChanged += new System.EventHandler(this.StuAid_TextChanged);
             // 
-            // StuAadd2
+            // StuRadd2
             // 
-            this.StuAadd2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAadd2.Location = new System.Drawing.Point(149, 184);
-            this.StuAadd2.Name = "StuAadd2";
-            this.StuAadd2.Size = new System.Drawing.Size(183, 26);
-            this.StuAadd2.TabIndex = 36;
+            this.StuRadd2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRadd2.Location = new System.Drawing.Point(149, 184);
+            this.StuRadd2.Name = "StuRadd2";
+            this.StuRadd2.Size = new System.Drawing.Size(183, 26);
+            this.StuRadd2.TabIndex = 36;
             // 
-            // StuAfname
+            // StuRfname
             // 
-            this.StuAfname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAfname.Location = new System.Drawing.Point(149, 78);
-            this.StuAfname.Name = "StuAfname";
-            this.StuAfname.Size = new System.Drawing.Size(183, 26);
-            this.StuAfname.TabIndex = 33;
+            this.StuRfname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRfname.Location = new System.Drawing.Point(149, 78);
+            this.StuRfname.Name = "StuRfname";
+            this.StuRfname.Size = new System.Drawing.Size(183, 26);
+            this.StuRfname.TabIndex = 33;
             // 
-            // StuAadd1
+            // StuRadd1
             // 
-            this.StuAadd1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAadd1.Location = new System.Drawing.Point(149, 149);
-            this.StuAadd1.Name = "StuAadd1";
-            this.StuAadd1.Size = new System.Drawing.Size(183, 26);
-            this.StuAadd1.TabIndex = 35;
+            this.StuRadd1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRadd1.Location = new System.Drawing.Point(149, 149);
+            this.StuRadd1.Name = "StuRadd1";
+            this.StuRadd1.Size = new System.Drawing.Size(183, 26);
+            this.StuRadd1.TabIndex = 35;
             // 
-            // StuAlname
+            // StuRlname
             // 
-            this.StuAlname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAlname.Location = new System.Drawing.Point(149, 114);
-            this.StuAlname.Name = "StuAlname";
-            this.StuAlname.Size = new System.Drawing.Size(183, 26);
-            this.StuAlname.TabIndex = 34;
+            this.StuRlname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRlname.Location = new System.Drawing.Point(149, 114);
+            this.StuRlname.Name = "StuRlname";
+            this.StuRlname.Size = new System.Drawing.Size(183, 26);
+            this.StuRlname.TabIndex = 34;
             // 
             // tabPage2
             // 
@@ -513,12 +555,14 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.StuAcancel);
+            this.panel2.Controls.Add(this.StuApaynow);
+            this.panel2.Controls.Add(this.StuAclass);
+            this.panel2.Controls.Add(this.StuAstupic);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.StuAsatus);
+            this.panel2.Controls.Add(this.StuAstuid);
             this.panel2.Controls.Add(this.label14);
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(490, 33);
@@ -526,22 +570,23 @@
             this.panel2.Size = new System.Drawing.Size(377, 350);
             this.panel2.TabIndex = 15;
             // 
-            // comboBox2
+            // StuAclass
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(154, 84);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 26);
-            this.comboBox2.TabIndex = 8;
+            this.StuAclass.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAclass.FormattingEnabled = true;
+            this.StuAclass.Location = new System.Drawing.Point(154, 84);
+            this.StuAclass.Name = "StuAclass";
+            this.StuAclass.Size = new System.Drawing.Size(138, 26);
+            this.StuAclass.TabIndex = 8;
             // 
-            // pictureBox1
+            // StuAstupic
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(154, 167);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 164);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.StuAstupic.Location = new System.Drawing.Point(154, 167);
+            this.StuAstupic.Name = "StuAstupic";
+            this.StuAstupic.Size = new System.Drawing.Size(154, 164);
+            this.StuAstupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StuAstupic.TabIndex = 4;
+            this.StuAstupic.TabStop = false;
             // 
             // label11
             // 
@@ -563,21 +608,21 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Class";
             // 
-            // label13
+            // StuAsatus
             // 
-            this.label13.BackColor = System.Drawing.Color.LimeGreen;
-            this.label13.Location = new System.Drawing.Point(155, 129);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 26);
-            this.label13.TabIndex = 7;
+            this.StuAsatus.BackColor = System.Drawing.Color.LimeGreen;
+            this.StuAsatus.Location = new System.Drawing.Point(155, 129);
+            this.StuAsatus.Name = "StuAsatus";
+            this.StuAsatus.Size = new System.Drawing.Size(32, 26);
+            this.StuAsatus.TabIndex = 7;
             // 
-            // textBox8
+            // StuAstuid
             // 
-            this.textBox8.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox8.Location = new System.Drawing.Point(154, 28);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(138, 26);
-            this.textBox8.TabIndex = 5;
+            this.StuAstuid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAstuid.Location = new System.Drawing.Point(154, 28);
+            this.StuAstuid.Name = "StuAstuid";
+            this.StuAstuid.Size = new System.Drawing.Size(138, 26);
+            this.StuAstuid.TabIndex = 5;
             // 
             // label14
             // 
@@ -592,34 +637,46 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.StuAvideoPlayer);
+            this.panel1.Controls.Add(this.StuAcamdevices);
+            this.panel1.Controls.Add(this.StuAStart);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.StuAstop);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(6, 33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 350);
             this.panel1.TabIndex = 14;
             // 
-            // comboBox1
+            // StuAvideoPlayer
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(200, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 9;
+            this.StuAvideoPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.StuAvideoPlayer.Location = new System.Drawing.Point(26, 132);
+            this.StuAvideoPlayer.Name = "StuAvideoPlayer";
+            this.StuAvideoPlayer.Size = new System.Drawing.Size(346, 199);
+            this.StuAvideoPlayer.TabIndex = 10;
+            this.StuAvideoPlayer.Text = "videoSourcePlayer1";
+            this.StuAvideoPlayer.VideoSource = null;
             // 
-            // button5
+            // StuAcamdevices
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(26, 25);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 33);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Start";
-            this.button5.UseVisualStyleBackColor = true;
+            this.StuAcamdevices.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAcamdevices.FormattingEnabled = true;
+            this.StuAcamdevices.Location = new System.Drawing.Point(199, 80);
+            this.StuAcamdevices.Name = "StuAcamdevices";
+            this.StuAcamdevices.Size = new System.Drawing.Size(121, 26);
+            this.StuAcamdevices.TabIndex = 9;
+            // 
+            // StuAStart
+            // 
+            this.StuAStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAStart.Location = new System.Drawing.Point(26, 25);
+            this.StuAStart.Name = "StuAStart";
+            this.StuAStart.Size = new System.Drawing.Size(119, 33);
+            this.StuAStart.TabIndex = 0;
+            this.StuAStart.Text = "Start";
+            this.StuAStart.UseVisualStyleBackColor = true;
+            this.StuAStart.Click += new System.EventHandler(this.StuAStart_Click);
             // 
             // label15
             // 
@@ -631,32 +688,35 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Select Cam";
             // 
-            // button6
+            // StuAstop
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(253, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(119, 33);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Stop";
-            this.button6.UseVisualStyleBackColor = true;
+            this.StuAstop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAstop.Location = new System.Drawing.Point(253, 25);
+            this.StuAstop.Name = "StuAstop";
+            this.StuAstop.Size = new System.Drawing.Size(119, 33);
+            this.StuAstop.TabIndex = 1;
+            this.StuAstop.Text = "Stop";
+            this.StuAstop.UseVisualStyleBackColor = true;
+            this.StuAstop.Click += new System.EventHandler(this.StuAstop_Click);
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage3.Controls.Add(this.comboBox5);
-            this.tabPage3.Controls.Add(this.button11);
-            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.StuPsearch);
+            this.tabPage3.Controls.Add(this.StuPmonth);
+            this.tabPage3.Controls.Add(this.StuPsave);
+            this.tabPage3.Controls.Add(this.StuPgrid);
             this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.textBox14);
-            this.tabPage3.Controls.Add(this.pictureBox3);
+            this.tabPage3.Controls.Add(this.StuPfees);
+            this.tabPage3.Controls.Add(this.Stuppic);
             this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.textBox12);
+            this.tabPage3.Controls.Add(this.StuPname);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.textBox9);
-            this.tabPage3.Controls.Add(this.textBox11);
+            this.tabPage3.Controls.Add(this.StuPid);
+            this.tabPage3.Controls.Add(this.StuPyear);
+            this.tabPage3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -664,33 +724,49 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Payments";
             // 
-            // comboBox5
+            // StuPsearch
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(133, 105);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(219, 26);
-            this.comboBox5.TabIndex = 50;
+            this.StuPsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuPsearch.FlatAppearance.BorderSize = 0;
+            this.StuPsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuPsearch.ForeColor = System.Drawing.Color.White;
+            this.StuPsearch.Location = new System.Drawing.Point(279, 64);
+            this.StuPsearch.Name = "StuPsearch";
+            this.StuPsearch.Size = new System.Drawing.Size(73, 26);
+            this.StuPsearch.TabIndex = 51;
+            this.StuPsearch.Text = "search";
+            this.StuPsearch.UseVisualStyleBackColor = false;
+            this.StuPsearch.Click += new System.EventHandler(this.StuPsearch_Click);
             // 
-            // button11
+            // StuPmonth
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(578, 488);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(111, 40);
-            this.button11.TabIndex = 49;
-            this.button11.Text = "Save";
-            this.button11.UseVisualStyleBackColor = false;
+            this.StuPmonth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.StuPmonth.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuPmonth.Location = new System.Drawing.Point(133, 105);
+            this.StuPmonth.Name = "StuPmonth";
+            this.StuPmonth.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StuPmonth.Size = new System.Drawing.Size(219, 26);
+            this.StuPmonth.TabIndex = 50;
             // 
-            // dataGridView3
+            // StuPsave
             // 
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StuPsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.StuPsave.FlatAppearance.BorderSize = 0;
+            this.StuPsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuPsave.ForeColor = System.Drawing.Color.White;
+            this.StuPsave.Location = new System.Drawing.Point(688, 488);
+            this.StuPsave.Name = "StuPsave";
+            this.StuPsave.Size = new System.Drawing.Size(111, 40);
+            this.StuPsave.TabIndex = 49;
+            this.StuPsave.Text = "Save";
+            this.StuPsave.UseVisualStyleBackColor = false;
+            this.StuPsave.Click += new System.EventHandler(this.StuPsave_Click);
+            // 
+            // StuPgrid
+            // 
+            this.StuPgrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StuPgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StuPgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -698,10 +774,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView3.Location = new System.Drawing.Point(40, 288);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(743, 171);
-            this.dataGridView3.TabIndex = 48;
+            this.StuPgrid.Location = new System.Drawing.Point(40, 288);
+            this.StuPgrid.Name = "StuPgrid";
+            this.StuPgrid.Size = new System.Drawing.Size(743, 171);
+            this.StuPgrid.TabIndex = 48;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -749,21 +825,22 @@
             this.label22.TabIndex = 46;
             this.label22.Text = "Fees";
             // 
-            // textBox14
+            // StuPfees
             // 
-            this.textBox14.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox14.Location = new System.Drawing.Point(133, 192);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(219, 26);
-            this.textBox14.TabIndex = 47;
+            this.StuPfees.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuPfees.Location = new System.Drawing.Point(133, 192);
+            this.StuPfees.Name = "StuPfees";
+            this.StuPfees.Size = new System.Drawing.Size(219, 26);
+            this.StuPfees.TabIndex = 47;
             // 
-            // pictureBox3
+            // Stuppic
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(578, 96);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(221, 159);
-            this.pictureBox3.TabIndex = 45;
-            this.pictureBox3.TabStop = false;
+            this.Stuppic.Location = new System.Drawing.Point(578, 96);
+            this.Stuppic.Name = "Stuppic";
+            this.Stuppic.Size = new System.Drawing.Size(221, 159);
+            this.Stuppic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Stuppic.TabIndex = 45;
+            this.Stuppic.TabStop = false;
             // 
             // label21
             // 
@@ -776,13 +853,13 @@
             this.label21.TabIndex = 41;
             this.label21.Text = "Name";
             // 
-            // textBox12
+            // StuPname
             // 
-            this.textBox12.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox12.Location = new System.Drawing.Point(580, 64);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(219, 26);
-            this.textBox12.TabIndex = 43;
+            this.StuPname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuPname.Location = new System.Drawing.Point(578, 64);
+            this.StuPname.Name = "StuPname";
+            this.StuPname.Size = new System.Drawing.Size(221, 26);
+            this.StuPname.TabIndex = 43;
             // 
             // label18
             // 
@@ -817,21 +894,22 @@
             this.label20.TabIndex = 37;
             this.label20.Text = "year";
             // 
-            // textBox9
+            // StuPid
             // 
-            this.textBox9.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox9.Location = new System.Drawing.Point(133, 64);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(87, 26);
-            this.textBox9.TabIndex = 38;
+            this.StuPid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuPid.Location = new System.Drawing.Point(133, 64);
+            this.StuPid.Name = "StuPid";
+            this.StuPid.Size = new System.Drawing.Size(87, 26);
+            this.StuPid.TabIndex = 38;
+            this.StuPid.TextChanged += new System.EventHandler(this.StuPid_TextChanged);
             // 
-            // textBox11
+            // StuPyear
             // 
-            this.textBox11.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox11.Location = new System.Drawing.Point(133, 149);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(219, 26);
-            this.textBox11.TabIndex = 40;
+            this.StuPyear.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuPyear.Location = new System.Drawing.Point(133, 149);
+            this.StuPyear.Name = "StuPyear";
+            this.StuPyear.Size = new System.Drawing.Size(219, 26);
+            this.StuPyear.TabIndex = 40;
             // 
             // tabPage4
             // 
@@ -931,18 +1009,33 @@
             this.button7.TabIndex = 22;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // StuAsearchbutton
+            // StuAtimer
             // 
-            this.StuAsearchbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.StuAsearchbutton.FlatAppearance.BorderSize = 0;
-            this.StuAsearchbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StuAsearchbutton.ForeColor = System.Drawing.Color.White;
-            this.StuAsearchbutton.Location = new System.Drawing.Point(452, 223);
-            this.StuAsearchbutton.Name = "StuAsearchbutton";
-            this.StuAsearchbutton.Size = new System.Drawing.Size(71, 36);
-            this.StuAsearchbutton.TabIndex = 49;
-            this.StuAsearchbutton.Text = "search";
-            this.StuAsearchbutton.UseVisualStyleBackColor = false;
+            this.StuAtimer.Interval = 500;
+            this.StuAtimer.Tick += new System.EventHandler(this.StuAtimer_Tick);
+            // 
+            // StuApaynow
+            // 
+            this.StuApaynow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuApaynow.Location = new System.Drawing.Point(209, 124);
+            this.StuApaynow.Name = "StuApaynow";
+            this.StuApaynow.Size = new System.Drawing.Size(83, 33);
+            this.StuApaynow.TabIndex = 11;
+            this.StuApaynow.Text = "PayNow";
+            this.StuApaynow.UseVisualStyleBackColor = true;
+            this.StuApaynow.Visible = false;
+            this.StuApaynow.Click += new System.EventHandler(this.StuApaynow_Click);
+            // 
+            // StuAcancel
+            // 
+            this.StuAcancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StuAcancel.Location = new System.Drawing.Point(298, 124);
+            this.StuAcancel.Name = "StuAcancel";
+            this.StuAcancel.Size = new System.Drawing.Size(67, 33);
+            this.StuAcancel.TabIndex = 12;
+            this.StuAcancel.Text = "Cancel";
+            this.StuAcancel.UseVisualStyleBackColor = true;
+            this.StuAcancel.Visible = false;
             // 
             // Student
             // 
@@ -958,19 +1051,19 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StuAqrpic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StuAgridviwe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRqrpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRgridviwe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRstupic)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuPgrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stuppic)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -985,41 +1078,41 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.RadioButton StuAfemale;
-        private System.Windows.Forms.RadioButton StuAmale;
+        private System.Windows.Forms.RadioButton StuRfemale;
+        private System.Windows.Forms.RadioButton StuRmale;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button StuAsearch;
+        private System.Windows.Forms.Button StuRsearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button StuAdeletebtn;
+        private System.Windows.Forms.Button StuRdeletebtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button StuAupdatebtn;
+        private System.Windows.Forms.Button StuRupdatebtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button StuAsavebtn;
+        private System.Windows.Forms.Button StuRsavebtn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox StuAcontact;
+        private System.Windows.Forms.TextBox StuRcontact;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox StuAadd3;
-        private System.Windows.Forms.TextBox StuAid;
-        private System.Windows.Forms.TextBox StuAadd2;
-        private System.Windows.Forms.TextBox StuAfname;
-        private System.Windows.Forms.TextBox StuAadd1;
-        private System.Windows.Forms.TextBox StuAlname;
+        private System.Windows.Forms.TextBox StuRadd3;
+        private System.Windows.Forms.TextBox StuRid;
+        private System.Windows.Forms.TextBox StuRadd2;
+        private System.Windows.Forms.TextBox StuRfname;
+        private System.Windows.Forms.TextBox StuRadd1;
+        private System.Windows.Forms.TextBox StuRlname;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox StuAclass;
+        private System.Windows.Forms.PictureBox StuAstupic;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label StuAsatus;
+        private System.Windows.Forms.TextBox StuAstuid;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox StuAcamdevices;
+        private System.Windows.Forms.Button StuAStart;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button StuAstop;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -1030,13 +1123,13 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox StuAstupic;
+        private System.Windows.Forms.PictureBox StuRstupic;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.DataGridView StuAgridviwe;
+        private System.Windows.Forms.TextBox StuPid;
+        private System.Windows.Forms.TextBox StuPyear;
+        private System.Windows.Forms.DataGridView StuRgridviwe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1045,11 +1138,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox StuPfees;
+        private System.Windows.Forms.PictureBox Stuppic;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.TextBox StuPname;
+        private System.Windows.Forms.DataGridView StuPgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1057,11 +1150,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button StuPsave;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Button StuAprint;
-        private System.Windows.Forms.PictureBox StuAqrpic;
-        private System.Windows.Forms.Button StuAsearchbutton;
+        private System.Windows.Forms.ComboBox StuPmonth;
+        private System.Windows.Forms.Button StuRprint;
+        private System.Windows.Forms.PictureBox StuRqrpic;
+        private System.Windows.Forms.Button StuRqrsave;
+        private System.Windows.Forms.Button button1;
+        private AForge.Controls.VideoSourcePlayer StuAvideoPlayer;
+        private System.Windows.Forms.Timer StuAtimer;
+        private System.Windows.Forms.Button StuPsearch;
+        private System.Windows.Forms.Button StuAcancel;
+        private System.Windows.Forms.Button StuApaynow;
     }
 }
