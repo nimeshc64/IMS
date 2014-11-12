@@ -37,18 +37,8 @@ namespace InstituteMS
 
             try
             {
-                db.cmd.CommandText = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
-                db.checkConn();
-                checkStatus = db.cmd.ExecuteNonQuery();
-                db.checkConn();
-                if (checkStatus == 1)
-                {
-                    MessageBox.Show("Save");
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-                }
+               command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
+               db.dmlQuery(command, 1);
             }
             catch { 
             
@@ -57,16 +47,8 @@ namespace InstituteMS
         public override void ModifyTeacher() {
             try
             {
-                db.cmd.CommandText = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
-                db.checkConn();
-                checkStatus = db.cmd.ExecuteNonQuery();
-                db.checkConn();
-                if (checkStatus == 1)
-                {
-                    MessageBox.Show("Updated");
-                }
-                else
-                    MessageBox.Show("not Updated");
+               command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
+               db.dmlQuery(command, 2);
             }
             catch { 
             
@@ -113,40 +95,20 @@ namespace InstituteMS
         public DataTable ReportAllDetails()
         { 
             command = "SELECT *FROM "+db.dbName+".Teachers";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            MySqlDataAdapter dataAdap = new MySqlDataAdapter(db.cmd);
-            dTable =new DataTable ();
-            dataAdap.Fill(dTable);
-            db.checkConn();
-
-            return dTable;
-        
+            return db.tableResult(command);
+           
         }
 
         public DataTable ReportSubject(string subj) {
             command = "SELECT *FROM " + db.dbName + ".Teachers WHERE subName='" +subj+ "'";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            MySqlDataAdapter dataAdap=new MySqlDataAdapter (db.cmd);
-            dTable =new DataTable();
-            dataAdap.Fill(dTable);
-            db.checkConn();
-
-            return dTable;
+            return db.tableResult(command);
         }
+
         public DataTable getTeachers()
         {
 
             command = "SELECT teaid,fname,lname FROM " + db.dbName + ".Teachers ";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            MySqlDataAdapter dataAdap = new MySqlDataAdapter(db.cmd);
-            dTable = new DataTable();
-            dataAdap.Fill(dTable);
-            db.checkConn();
-
-            return dTable;
+            return db.tableResult(command);
         }
 
         public int GetLastTeachersID() {

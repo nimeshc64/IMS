@@ -69,6 +69,8 @@
     <Compile Include="Classes.cs" />
     <Compile Include="CommonClass.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="Employees.cs" />
+    <Compile Include="EmployeesPayments.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>

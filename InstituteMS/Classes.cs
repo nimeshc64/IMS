@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace InstituteMS
 {
-    class Classes
+    abstract class Classes
     {
-        public int courseID;
-        public string teacher;
+        public int classID;
+        public int teaid;
         public string batch;
         public string day;
         public string startTime;
         public string endTime;
-        public string fees;
+        public double fees;
+
+       
     }
 }
