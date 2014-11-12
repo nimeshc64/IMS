@@ -38,7 +38,7 @@ namespace InstituteMS
             try
             {
                command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
-               db.dmlQuery(command, 1);
+               db.DMLQuery(command, 1);
             }
             catch { 
             
@@ -48,7 +48,7 @@ namespace InstituteMS
             try
             {
                command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
-               db.dmlQuery(command, 2);
+               db.DMLQuery(command, 2);
             }
             catch { 
             
@@ -59,66 +59,54 @@ namespace InstituteMS
         
         }
         
-        public ArrayList SearchTeacher(string teaid)
-        {
+        //public ArrayList SearchTeacher(string teaid)
+        //{
             
-                db.cmd.CommandText = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + teaid + "'";
-                db.checkConn();
-                read = db.cmd.ExecuteReader();
-                read.Read();
+        //        db.cmd.CommandText = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + teaid + "'";
+        //        db.checkConn();
+        //        read = db.cmd.ExecuteReader();
+        //        read.Read();
                 
-                    for (int c = 0; c < read.FieldCount; c++)
-                    {
-                        list.Add(read[c].ToString());
-                    }
+        //            for (int c = 0; c < read.FieldCount; c++)
+        //            {
+        //                list.Add(read[c].ToString());
+        //            }
                
-                db.checkConn();
-                return list;
+        //        db.checkConn();
+        //        return list;
             
           
         
-        }
-      
-        //public Tuple <string , string, string>SearchTeacher2() {
-        //    Teacher teaFor = new Teacher();
-        //    db.cmd.CommandText = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + this.teaID + "'";
-        //    db.checkConn();
-        //    MySqlDataReader read = db.cmd.ExecuteReader();
-        //    read.Read();
-        //        string a = read["teaID"].ToString();
-        //        string b = read["lname"].ToString();
-        //        string c = read["contact"].ToString();
-        //    db.checkConn();
-        //    return new Tuple<string, string, string>(a, b, c);
         //}
+        public DataTable SearchTeacher()
+        {
+            command = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + this.teaID + "'";
+            return db.TableResult(command);
+        }
+       
 
         public DataTable ReportAllDetails()
-        { 
-            command = "SELECT *FROM "+db.dbName+".Teachers";
-            return db.tableResult(command);
+        {
+            command = "SELECT *From "+db.dbName+".Teachers";
+            return db.TableResult(command);
            
         }
 
         public DataTable ReportSubject(string subj) {
-            command = "SELECT *FROM " + db.dbName + ".Teachers WHERE subName='" +subj+ "'";
-            return db.tableResult(command);
+            command = "SELECT cls.classid,cls.day,cls.starttime,cls.endtime,cls.batch,cls.fee,tea.fname,tea.lname FROM " + db.dbName + ".Teachers tea," + db.dbName + ".class cls  WHERE subName='" + subj + "'";
+            return db.TableResult(command);
         }
 
         public DataTable getTeachers()
         {
 
             command = "SELECT teaid,fname,lname FROM " + db.dbName + ".Teachers ";
-            return db.tableResult(command);
+            return db.TableResult(command);
         }
 
         public int GetLastTeachersID() {
             command = "SELECT MAX(teaid) FROM "+db.dbName+".Teachers";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            int max = int.Parse(db.cmd.ExecuteScalar().ToString());
-            db.checkConn();
-
-            return max;
+            return db.GetLastID(command);
         }
     }
 }

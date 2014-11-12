@@ -16,5 +16,12 @@ namespace InstituteMS
         {
             InitializeComponent();
         }
+
+        private void empSavebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

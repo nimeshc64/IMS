@@ -30,33 +30,32 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.empIdtxt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.empSavebtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.empContacttxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.empAdd3txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.empAdd2txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.empAdd1txt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.empNICtxt = new System.Windows.Forms.TextBox();
+            this.empFNametxt = new System.Windows.Forms.TextBox();
+            this.empLNametxt = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -74,7 +73,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -99,26 +97,26 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.empIdtxt);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.empSavebtn);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.empContacttxt);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.empAdd3txt);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.empAdd2txt);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.empAdd1txt);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.empNICtxt);
+            this.tabPage1.Controls.Add(this.empFNametxt);
+            this.tabPage1.Controls.Add(this.empLNametxt);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -126,13 +124,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
             // 
-            // textBox1
+            // label16
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox1.Location = new System.Drawing.Point(230, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 28;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(336, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 23);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "ID";
+            // 
+            // empIdtxt
+            // 
+            this.empIdtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empIdtxt.Location = new System.Drawing.Point(230, 33);
+            this.empIdtxt.Name = "empIdtxt";
+            this.empIdtxt.Size = new System.Drawing.Size(100, 26);
+            this.empIdtxt.TabIndex = 28;
             // 
             // button3
             // 
@@ -173,18 +182,19 @@
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // empSavebtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(85)))), ((int)(((byte)(236)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(364, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 40);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.empSavebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(85)))), ((int)(((byte)(236)))));
+            this.empSavebtn.FlatAppearance.BorderSize = 0;
+            this.empSavebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.empSavebtn.ForeColor = System.Drawing.Color.White;
+            this.empSavebtn.Location = new System.Drawing.Point(364, 355);
+            this.empSavebtn.Name = "empSavebtn";
+            this.empSavebtn.Size = new System.Drawing.Size(111, 40);
+            this.empSavebtn.TabIndex = 36;
+            this.empSavebtn.Text = "Save";
+            this.empSavebtn.UseVisualStyleBackColor = false;
+            this.empSavebtn.Click += new System.EventHandler(this.empSavebtn_Click);
             // 
             // label1
             // 
@@ -230,13 +240,13 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Address Line1";
             // 
-            // textBox8
+            // empContacttxt
             // 
-            this.textBox8.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox8.Location = new System.Drawing.Point(230, 294);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(159, 26);
-            this.textBox8.TabIndex = 35;
+            this.empContacttxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empContacttxt.Location = new System.Drawing.Point(230, 294);
+            this.empContacttxt.Name = "empContacttxt";
+            this.empContacttxt.Size = new System.Drawing.Size(159, 26);
+            this.empContacttxt.TabIndex = 35;
             // 
             // label5
             // 
@@ -249,13 +259,13 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Contact";
             // 
-            // textBox7
+            // empAdd3txt
             // 
-            this.textBox7.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox7.Location = new System.Drawing.Point(230, 256);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(159, 26);
-            this.textBox7.TabIndex = 34;
+            this.empAdd3txt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empAdd3txt.Location = new System.Drawing.Point(230, 256);
+            this.empAdd3txt.Name = "empAdd3txt";
+            this.empAdd3txt.Size = new System.Drawing.Size(159, 26);
+            this.empAdd3txt.TabIndex = 34;
             // 
             // label6
             // 
@@ -268,13 +278,13 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Address Line2";
             // 
-            // textBox6
+            // empAdd2txt
             // 
-            this.textBox6.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox6.Location = new System.Drawing.Point(230, 219);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 26);
-            this.textBox6.TabIndex = 33;
+            this.empAdd2txt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empAdd2txt.Location = new System.Drawing.Point(230, 219);
+            this.empAdd2txt.Name = "empAdd2txt";
+            this.empAdd2txt.Size = new System.Drawing.Size(159, 26);
+            this.empAdd2txt.TabIndex = 33;
             // 
             // label7
             // 
@@ -287,13 +297,13 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Address Line3";
             // 
-            // textBox5
+            // empAdd1txt
             // 
-            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox5.Location = new System.Drawing.Point(230, 182);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 26);
-            this.textBox5.TabIndex = 32;
+            this.empAdd1txt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empAdd1txt.Location = new System.Drawing.Point(230, 182);
+            this.empAdd1txt.Name = "empAdd1txt";
+            this.empAdd1txt.Size = new System.Drawing.Size(159, 26);
+            this.empAdd1txt.TabIndex = 32;
             // 
             // label8
             // 
@@ -306,29 +316,29 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "NIC";
             // 
-            // textBox4
+            // empNICtxt
             // 
-            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox4.Location = new System.Drawing.Point(230, 145);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 26);
-            this.textBox4.TabIndex = 31;
+            this.empNICtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empNICtxt.Location = new System.Drawing.Point(230, 145);
+            this.empNICtxt.Name = "empNICtxt";
+            this.empNICtxt.Size = new System.Drawing.Size(159, 26);
+            this.empNICtxt.TabIndex = 31;
             // 
-            // textBox2
+            // empFNametxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox2.Location = new System.Drawing.Point(230, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 26);
-            this.textBox2.TabIndex = 29;
+            this.empFNametxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empFNametxt.Location = new System.Drawing.Point(230, 71);
+            this.empFNametxt.Name = "empFNametxt";
+            this.empFNametxt.Size = new System.Drawing.Size(159, 26);
+            this.empFNametxt.TabIndex = 29;
             // 
-            // textBox3
+            // empLNametxt
             // 
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox3.Location = new System.Drawing.Point(230, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 26);
-            this.textBox3.TabIndex = 30;
+            this.empLNametxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.empLNametxt.Location = new System.Drawing.Point(230, 108);
+            this.empLNametxt.Name = "empLNametxt";
+            this.empLNametxt.Size = new System.Drawing.Size(159, 26);
+            this.empLNametxt.TabIndex = 30;
             // 
             // tabPage2
             // 
@@ -337,8 +347,6 @@
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.textBox12);
             this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.textBox9);
             this.tabPage2.Controls.Add(this.label10);
@@ -392,32 +400,6 @@
             this.label14.Size = new System.Drawing.Size(50, 23);
             this.label14.TabIndex = 22;
             this.label14.Text = "Name";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(85)))), ((int)(((byte)(236)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(524, 335);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(111, 40);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Modify";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(85)))), ((int)(((byte)(236)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(654, 335);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(111, 40);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -596,17 +578,6 @@
             this.button11.TabIndex = 26;
             this.button11.UseVisualStyleBackColor = false;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(336, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 23);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "ID";
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,31 +605,29 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox empIdtxt;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button empSavebtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox empContacttxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox empAdd3txt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox empAdd2txt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox empAdd1txt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox empNICtxt;
+        private System.Windows.Forms.TextBox empFNametxt;
+        private System.Windows.Forms.TextBox empLNametxt;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;

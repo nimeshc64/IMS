@@ -57,6 +57,7 @@
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Payments.cs" />
+    <Compile Include="PermanentEmployee.cs" />
     <Compile Include="ReportsPayment.cs">
       <SubType>Form</SubType>
     </Compile>

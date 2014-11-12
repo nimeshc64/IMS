@@ -49,19 +49,22 @@ namespace InstituteMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            tea.SearchTeacher(teaID.Text);
-            teaID.Text = tea.list[0].ToString();
-            teaFName.Text = tea.list[1].ToString();
-            teaLName.Text = tea.list[2].ToString();
-            teaNIC.Text = tea.list[3].ToString();
-            teaContact.Text = tea.list[4].ToString();
-            teaAdd1.Text = tea.list[5].ToString();
-            teaAdd2.Text = tea.list[6].ToString();
-            teaAdd3.Text = tea.list[7].ToString();
-            teaEmail.Text = tea.list[8].ToString();
-            teaSubject.Text = tea.list[9].ToString();
-            tea.list.Clear();
+            InternalTeachers tr = new InternalTeachers();
+            tr.teaID = int.Parse(teaID.Text);
+            teaFName.Text = tr.SearchTeacher().Rows[0]["fname"].ToString();
+
+            //tea.SearchTeacher(teaID.Text);
+            //teaID.Text = tea.list[0].ToString();
+            //teaFName.Text = tea.list[1].ToString();
+            //teaLName.Text = tea.list[2].ToString();
+            //teaNIC.Text = tea.list[3].ToString();
+            //teaContact.Text = tea.list[4].ToString();
+            //teaAdd1.Text = tea.list[5].ToString();
+            //teaAdd2.Text = tea.list[6].ToString();
+            //teaAdd3.Text = tea.list[7].ToString();
+            //teaEmail.Text = tea.list[8].ToString();
+            //teaSubject.Text = tea.list[9].ToString();
+            //tea.list.Clear();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)

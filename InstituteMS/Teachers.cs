@@ -19,6 +19,7 @@ namespace InstituteMS
         public string teaEmail;
         public string teaSubject;
 
+
         abstract public  void RegisterTeacher();
         abstract public void ModifyTeacher();
     }
