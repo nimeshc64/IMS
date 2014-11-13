@@ -30,11 +30,11 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
+            this.empLastIdlbl = new System.Windows.Forms.Label();
             this.empIdtxt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.empModbtn = new System.Windows.Forms.Button();
             this.empSavebtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.empAlldatagrid = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empAlldatagrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,11 +96,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.empLastIdlbl);
             this.tabPage1.Controls.Add(this.empIdtxt);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.empModbtn);
             this.tabPage1.Controls.Add(this.empSavebtn);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
@@ -124,16 +124,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
             // 
-            // label16
+            // empLastIdlbl
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(336, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 23);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "ID";
+            this.empLastIdlbl.AutoSize = true;
+            this.empLastIdlbl.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.empLastIdlbl.ForeColor = System.Drawing.Color.White;
+            this.empLastIdlbl.Location = new System.Drawing.Point(336, 36);
+            this.empLastIdlbl.Name = "empLastIdlbl";
+            this.empLastIdlbl.Size = new System.Drawing.Size(31, 23);
+            this.empLastIdlbl.TabIndex = 40;
+            this.empLastIdlbl.Text = "ID";
             // 
             // empIdtxt
             // 
@@ -169,18 +169,19 @@
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // empModbtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(85)))), ((int)(((byte)(236)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(491, 355);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 40);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.empModbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(85)))), ((int)(((byte)(236)))));
+            this.empModbtn.FlatAppearance.BorderSize = 0;
+            this.empModbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.empModbtn.ForeColor = System.Drawing.Color.White;
+            this.empModbtn.Location = new System.Drawing.Point(491, 355);
+            this.empModbtn.Name = "empModbtn";
+            this.empModbtn.Size = new System.Drawing.Size(111, 40);
+            this.empModbtn.TabIndex = 37;
+            this.empModbtn.Text = "Modify";
+            this.empModbtn.UseVisualStyleBackColor = false;
+            this.empModbtn.Click += new System.EventHandler(this.empModbtn_Click);
             // 
             // empSavebtn
             // 
@@ -494,21 +495,22 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.empAlldatagrid);
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(781, 433);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reports";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // dataGridView1
+            // empAlldatagrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(758, 320);
-            this.dataGridView1.TabIndex = 0;
+            this.empAlldatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empAlldatagrid.Location = new System.Drawing.Point(13, 39);
+            this.empAlldatagrid.Name = "empAlldatagrid";
+            this.empAlldatagrid.Size = new System.Drawing.Size(758, 320);
+            this.empAlldatagrid.TabIndex = 0;
             // 
             // label9
             // 
@@ -594,7 +596,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empAlldatagrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -608,7 +610,7 @@
         private System.Windows.Forms.TextBox empIdtxt;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button empModbtn;
         private System.Windows.Forms.Button empSavebtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -646,8 +648,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridView empAlldatagrid;
+        private System.Windows.Forms.Label empLastIdlbl;
 
     }
 }
