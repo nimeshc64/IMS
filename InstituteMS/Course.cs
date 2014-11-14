@@ -35,7 +35,7 @@ namespace InstituteMS
         {
             CommonClass commcls = new CommonClass();
             string teaID = couTeaDetails.CurrentRow.Cells[0].Value.ToString();
-            commcls.SetValues(int.Parse(clsID.Text),int.Parse(teaID),clsBatch.Text,clsDay.Text,clsStartTime.Text,clsEndTime.Text,double.Parse(clsFee.Text));
+            commcls.SetValues(int.Parse(clsIDtxt.Text),int.Parse(teaID),clsBatchtxt.Text,clsDaycmb.Text,clsStartTimecmb.Text,clsEndTimecmb.Text,double.Parse(clsFeetxt.Text));
             commcls.RegisterClass();
             clsLastId.Text =  commcls.GetLastClassID().ToString();
             ClearTextFields();
@@ -54,8 +54,9 @@ namespace InstituteMS
         {
             CommonClass commcls = new CommonClass();
             string teaID = couTeaDetails.CurrentRow.Cells[0].Value.ToString();
-            commcls.SetValues(int.Parse(clsID.Text), int.Parse(teaID), clsBatch.Text, clsDay.Text, clsStartTime.Text, clsEndTime.Text, double.Parse(clsFee.Text));
+            commcls.SetValues(int.Parse(clsIDtxt.Text), int.Parse(teaID), clsBatchtxt.Text, clsDaycmb.Text, clsStartTimecmb.Text, clsEndTimecmb.Text, double.Parse(clsFeetxt.Text));
             commcls.ModifyClass();
+            ClearTextFields();
 
         }
         public void setTextBoxValues()
@@ -79,16 +80,16 @@ namespace InstituteMS
 
         private void couTeaDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            teaIdSelect.Text = couTeaDetails.CurrentRow.Cells[0].Value.ToString();
+            teaIdSelectlbl.Text = couTeaDetails.CurrentRow.Cells[0].Value.ToString();
         }
         public void ClearTextFields() {
-            clsID.Clear();
-            clsFee.Clear();
-            clsDay.Text = "";
-            clsBatch.Clear();
-            teaIdSelect.Clear();
-            clsStartTime.Text = "";
-            clsEndTime.Text = "";
+            clsIDtxt.Clear();
+            clsFeetxt.Clear();
+            clsDaycmb.Text = "";
+            clsBatchtxt.Clear();
+            teaIdSelectlbl.Clear();
+            clsStartTimecmb.Text = "";
+            clsEndTimecmb.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -101,6 +102,20 @@ namespace InstituteMS
             CommonClass commcls = new CommonClass();
             commcls.clsDay = days.SelectedItem.ToString();
             clsGridView.DataSource =  commcls.ClassesDayReports();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CommonClass commcls = new CommonClass();
+            commcls.clsId = int.Parse(clsIDtxt.Text);
+            commcls.SearchClass();
+            teaIdSelectlbl.Text = commcls.clsTeaId.ToString();
+            clsBatchtxt.Text = commcls.clsBatch;
+            clsDaycmb.Text = commcls.clsDay;
+            clsStartTimecmb.Text = commcls.clsStartTime;
+            clsEndTimecmb.Text = commcls.clsEndTime;
+            clsFeetxt.Text = commcls.clsFees.ToString();
+
         }
     }
 }

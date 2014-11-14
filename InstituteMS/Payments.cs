@@ -9,9 +9,53 @@ namespace InstituteMS
     class Payments
     {
         public int payID;
-        public int month;
+        public string month;
         public int year;
-        public string payDate;
-        public float amount;
+        public string paymentDate;
+        public double amount;
+
+        public int payId {
+            get {
+                return this.payID;
+            }
+            set {
+                payID = value;
+            }
+        }
+        public string payMonth {
+            get {
+                return this.month;
+            }
+            set {
+                month = value;
+            }
+        
+        }
+
+        public int payYear {
+            get {
+                return this.year;
+            }
+            set {
+                year = value;
+            }
+        }
+
+        public string payDate {
+            get {
+                return this.paymentDate;
+            }
+            set {
+                paymentDate = value;
+            }
+        }
+        public double payAmount {
+            get {
+                return this.amount;
+            }
+            set {
+                amount = value;
+            }
+        }
     }
 }

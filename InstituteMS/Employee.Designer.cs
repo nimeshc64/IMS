@@ -52,16 +52,16 @@
             this.empFNametxt = new System.Windows.Forms.TextBox();
             this.empLNametxt = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.payEmpIdtxt = new System.Windows.Forms.ComboBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.payEmpAmounttxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.payEmpYeartxt = new System.Windows.Forms.TextBox();
+            this.payEmpMonthcmb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -123,6 +123,7 @@
             this.tabPage1.Size = new System.Drawing.Size(781, 433);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // empLastIdlbl
             // 
@@ -155,6 +156,7 @@
             this.button3.TabIndex = 38;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -168,6 +170,7 @@
             this.button4.TabIndex = 39;
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // empModbtn
             // 
@@ -344,16 +347,16 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.payEmpIdtxt);
             this.tabPage2.Controls.Add(this.textBox13);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.textBox12);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.textBox9);
+            this.tabPage2.Controls.Add(this.payEmpAmounttxt);
             this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.payEmpYeartxt);
+            this.tabPage2.Controls.Add(this.payEmpMonthcmb);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label13);
@@ -363,6 +366,16 @@
             this.tabPage2.Size = new System.Drawing.Size(781, 433);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Payments";
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
+            // 
+            // payEmpIdtxt
+            // 
+            this.payEmpIdtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.payEmpIdtxt.FormattingEnabled = true;
+            this.payEmpIdtxt.Location = new System.Drawing.Point(179, 59);
+            this.payEmpIdtxt.Name = "payEmpIdtxt";
+            this.payEmpIdtxt.Size = new System.Drawing.Size(80, 26);
+            this.payEmpIdtxt.TabIndex = 26;
             // 
             // textBox13
             // 
@@ -414,14 +427,15 @@
             this.button7.TabIndex = 19;
             this.button7.Text = "Save";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox9
+            // payEmpAmounttxt
             // 
-            this.textBox9.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox9.Location = new System.Drawing.Point(179, 190);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(153, 26);
-            this.textBox9.TabIndex = 18;
+            this.payEmpAmounttxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.payEmpAmounttxt.Location = new System.Drawing.Point(179, 190);
+            this.payEmpAmounttxt.Name = "payEmpAmounttxt";
+            this.payEmpAmounttxt.Size = new System.Drawing.Size(153, 26);
+            this.payEmpAmounttxt.TabIndex = 18;
             // 
             // label10
             // 
@@ -434,30 +448,35 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Amount";
             // 
-            // textBox10
+            // payEmpYeartxt
             // 
-            this.textBox10.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox10.Location = new System.Drawing.Point(179, 144);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(192, 26);
-            this.textBox10.TabIndex = 16;
+            this.payEmpYeartxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.payEmpYeartxt.Location = new System.Drawing.Point(179, 144);
+            this.payEmpYeartxt.Name = "payEmpYeartxt";
+            this.payEmpYeartxt.Size = new System.Drawing.Size(192, 26);
+            this.payEmpYeartxt.TabIndex = 16;
             // 
-            // comboBox1
+            // payEmpMonthcmb
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(179, 102);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 26);
-            this.comboBox1.TabIndex = 15;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox11.Location = new System.Drawing.Point(179, 60);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(70, 26);
-            this.textBox11.TabIndex = 14;
+            this.payEmpMonthcmb.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.payEmpMonthcmb.FormattingEnabled = true;
+            this.payEmpMonthcmb.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.payEmpMonthcmb.Location = new System.Drawing.Point(179, 102);
+            this.payEmpMonthcmb.Name = "payEmpMonthcmb";
+            this.payEmpMonthcmb.Size = new System.Drawing.Size(192, 26);
+            this.payEmpMonthcmb.TabIndex = 15;
             // 
             // label11
             // 
@@ -503,6 +522,7 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reports";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
             // 
             // empAlldatagrid
             // 
@@ -631,11 +651,10 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox payEmpAmounttxt;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox payEmpYeartxt;
+        private System.Windows.Forms.ComboBox payEmpMonthcmb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -650,6 +669,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView empAlldatagrid;
         private System.Windows.Forms.Label empLastIdlbl;
+        private System.Windows.Forms.ComboBox payEmpIdtxt;
 
     }
 }

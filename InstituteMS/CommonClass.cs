@@ -22,7 +22,21 @@ namespace InstituteMS
             command = "INSERT INTO "+db.dbName+".class(classid,day,starttime,endtime,batch,fee,teachid) VALUES('"+clsId+"','"+clsDay+"','"+clsStartTime+"','"+clsEndTime+"','"+clsBatch+"','"+clsFees+"','"+clsTeaId+"')";
             db.DMLQuery(command, 1);
         }
+        public void SearchClass() {
+            try
+            {
+                command = "SELECT * FROM " + db.dbName + ".class WHERE classid ='" + clsId + "'";
+                DataTable serClass = db.TableResult(command);
 
+                clsDay = serClass.Rows[0][1].ToString();
+                clsStartTime = serClass.Rows[0][2].ToString();
+                clsEndTime = serClass.Rows[0][3].ToString();
+                clsBatch = serClass.Rows[0][4].ToString();
+                clsFees = int.Parse(serClass.Rows[0][5].ToString());
+                clsTeaId = int.Parse(serClass.Rows[0][6].ToString());
+            }
+            catch { }
+        }
         public void DeleteClass() {
             command = "DELETE FROM "+db.dbName+".class WHERE classID='"+clsId+"'";
             db.DMLQuery(command, 3);
@@ -33,7 +47,14 @@ namespace InstituteMS
         }
         public int GetLastClassID() {
             command = "SELECT MAX(classid) FROM " + db.dbName + ".class";
-            return db.GetLastID(command);
+            try
+            {
+                
+                return db.GetLastID(command);
+            }
+            catch {
+                return db.GetLastID(command);
+            }
 
         }
         public void SetValues(int clsid,int teaId,string batch,string day,string startTime,string endTime,double fees) {

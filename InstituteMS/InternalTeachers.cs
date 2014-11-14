@@ -22,22 +22,22 @@ namespace InstituteMS
         DBConnect db = new DBConnect();
         
         public void setTeacherValues(int teaID,string teaFName,string teaLName,string teaNIC, string teaContact,string teaAdd1,string teaAdd2,string teaAdd3,string teaEmail,string teaSubject) {
-            this.teaID = teaID;
-            this.teaFName = teaFName;
-            this.teaLName = teaLName;
-            this.teaNIC = teaNIC;
-            this.teaContact = teaContact;
+            teacId = teaID;
+            teacFName = teaFName;
+            teacLName = teaLName;
+            teacNIC = teaNIC;
+            teacContact = teaContact;
             this.teaAdd1 = teaAdd1;
             this.teaAdd2 = teaAdd2;
             this.teaAdd3 = teaAdd3;
-            this.teaEmail = teaEmail;
+            teacEmail = teaEmail;
             this.teaSubject = teaSubject;
         }
         public override void RegisterTeacher() {
 
             try
             {
-               command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
+                command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + teacId + "','" + teacFName + "','" + teacLName + "','" + teacNIC + "','" + teacContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + teacEmail + "','" + this.teaSubject + "')";
                db.DMLQuery(command, 1);
             }
             catch { 
@@ -47,7 +47,7 @@ namespace InstituteMS
         public override void ModifyTeacher() {
             try
             {
-               command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
+               command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + teacId + "',fname='" + teacFName + "',lname='" + teacLName + "',nic='" + teacNIC + "',contact='" + teacContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + teacEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + teacId+ "'";
                db.DMLQuery(command, 2);
             }
             catch { 
@@ -58,55 +58,72 @@ namespace InstituteMS
         
         
         }
-        
-        //public ArrayList SearchTeacher(string teaid)
-        //{
-            
-        //        db.cmd.CommandText = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + teaid + "'";
-        //        db.checkConn();
-        //        read = db.cmd.ExecuteReader();
-        //        read.Read();
-                
-        //            for (int c = 0; c < read.FieldCount; c++)
-        //            {
-        //                list.Add(read[c].ToString());
-        //            }
-               
-        //        db.checkConn();
-        //        return list;
-            
-          
-        
-        //}
-        public DataTable SearchTeacher()
+       
+        public void SearchTeacher()
         {
-            command = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + this.teaID + "'";
-            return db.TableResult(command);
+            try
+            {
+                command = "SELECT *FROM " + db.dbName + ".Teachers WHERE teaID='" + teacId + "'";
+                DataTable teaTable = db.TableResult(command);
+                teacFName = teaTable.Rows[0][1].ToString();
+                teacLName = teaTable.Rows[0][2].ToString();
+                teacNIC = teaTable.Rows[0][3].ToString();
+                teacContact = teaTable.Rows[0][4].ToString();
+                teaAdd1 = teaTable.Rows[0][5].ToString();
+                teaAdd2 = teaTable.Rows[0][6].ToString();
+                teaAdd3 = teaTable.Rows[0][7].ToString();
+                teacEmail = teaTable.Rows[0][8].ToString();
+                teaSubject = teaTable.Rows[0][9].ToString();
+            }
+            catch { 
+                
+            }
         }
        
 
         public DataTable ReportAllDetails()
         {
-            command = "SELECT *From "+db.dbName+".Teachers";
+            command = "SELECT teaid,CONCAT(fname,' ',lname)AS Name ,nic ,contact , CONCAT(address1,' ,',address2,' ,',address3) As Address,mail As EMail,subname AS SubjectName FROM "+db.dbName+".Teachers";
             return db.TableResult(command);
            
         }
 
         public DataTable ReportSubject(string subj) {
-            command = "SELECT cls.classid,cls.day,cls.starttime,cls.endtime,cls.batch,cls.fee,tea.fname,tea.lname FROM " + db.dbName + ".Teachers tea," + db.dbName + ".class cls  WHERE subName='" + subj + "'";
+            command = "SELECT cls.classid,cls.day,cls.starttime,cls.endtime,cls.batch,cls.fee,CONCAT(tea.fname,' ',tea.lname)AS Name FROM " + db.dbName + ".Teachers tea," + db.dbName + ".class cls  WHERE subName='" + subj + "'";
             return db.TableResult(command);
         }
 
         public DataTable getTeachers()
         {
 
-            command = "SELECT teaid,fname,lname FROM " + db.dbName + ".Teachers ";
+            command = "SELECT teaid As TeacherID,CONCAT(fname,' ',lname) As Name FROM " + db.dbName + ".Teachers ";
             return db.TableResult(command);
         }
 
         public int GetLastTeachersID() {
-            command = "SELECT MAX(teaid) FROM "+db.dbName+".Teachers";
-            return db.GetLastID(command);
+            try
+            {
+                command = "SELECT MAX(teaid) FROM " + db.dbName + ".Teachers";
+                return db.GetLastID(command);
+            }
+            catch
+            {
+                command = "SELECT MAX(teaid) FROM " + db.dbName + ".Teachers";
+                return db.GetLastID(command);
+
+            }
+        }
+
+        public DataTable GetSubjects() { 
+            try{
+                command = "SELECT DISTINCT subname FROM " + db.dbName + ".Teachers ";
+
+                return db.TableResult(command);
+            }
+            catch{
+                return null;
+            }
+        
         }
     }
 }

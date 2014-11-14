@@ -31,9 +31,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lastIDlbl = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.teaContact = new System.Windows.Forms.TextBox();
-            this.teaSubject = new System.Windows.Forms.ComboBox();
+            this.teaContacttxt = new System.Windows.Forms.TextBox();
+            this.teaSubjecttxt = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,17 +45,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.teaEmail = new System.Windows.Forms.TextBox();
+            this.teaEmailtxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.teaAdd3 = new System.Windows.Forms.TextBox();
+            this.teaAdd3txt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.teaAdd2 = new System.Windows.Forms.TextBox();
+            this.teaAdd2txt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.teaAdd1 = new System.Windows.Forms.TextBox();
-            this.teaID = new System.Windows.Forms.TextBox();
-            this.teaNIC = new System.Windows.Forms.TextBox();
-            this.teaFName = new System.Windows.Forms.TextBox();
-            this.teaLName = new System.Windows.Forms.TextBox();
+            this.teaAdd1txt = new System.Windows.Forms.TextBox();
+            this.teaIDtxt = new System.Windows.Forms.TextBox();
+            this.teaNICtxt = new System.Windows.Forms.TextBox();
+            this.teaFNametxt = new System.Windows.Forms.TextBox();
+            this.teaLNametxt = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -85,7 +86,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.lastID = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -121,10 +121,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.lastID);
+            this.tabPage1.Controls.Add(this.lastIDlbl);
             this.tabPage1.Controls.Add(this.label24);
-            this.tabPage1.Controls.Add(this.teaContact);
-            this.tabPage1.Controls.Add(this.teaSubject);
+            this.tabPage1.Controls.Add(this.teaContacttxt);
+            this.tabPage1.Controls.Add(this.teaSubjecttxt);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.label1);
@@ -135,17 +135,17 @@
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.teaEmail);
+            this.tabPage1.Controls.Add(this.teaEmailtxt);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.teaAdd3);
+            this.tabPage1.Controls.Add(this.teaAdd3txt);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.teaAdd2);
+            this.tabPage1.Controls.Add(this.teaAdd2txt);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.teaAdd1);
-            this.tabPage1.Controls.Add(this.teaID);
-            this.tabPage1.Controls.Add(this.teaNIC);
-            this.tabPage1.Controls.Add(this.teaFName);
-            this.tabPage1.Controls.Add(this.teaLName);
+            this.tabPage1.Controls.Add(this.teaAdd1txt);
+            this.tabPage1.Controls.Add(this.teaIDtxt);
+            this.tabPage1.Controls.Add(this.teaNICtxt);
+            this.tabPage1.Controls.Add(this.teaFNametxt);
+            this.tabPage1.Controls.Add(this.teaLNametxt);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -153,6 +153,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // lastIDlbl
+            // 
+            this.lastIDlbl.AutoSize = true;
+            this.lastIDlbl.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.lastIDlbl.ForeColor = System.Drawing.Color.White;
+            this.lastIDlbl.Location = new System.Drawing.Point(357, 83);
+            this.lastIDlbl.Name = "lastIDlbl";
+            this.lastIDlbl.Size = new System.Drawing.Size(31, 23);
+            this.lastIDlbl.TabIndex = 48;
+            this.lastIDlbl.Text = "ID";
             // 
             // label24
             // 
@@ -165,22 +177,22 @@
             this.label24.TabIndex = 47;
             this.label24.Text = "Contact";
             // 
-            // teaContact
+            // teaContacttxt
             // 
-            this.teaContact.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaContact.Location = new System.Drawing.Point(219, 228);
-            this.teaContact.Name = "teaContact";
-            this.teaContact.Size = new System.Drawing.Size(176, 26);
-            this.teaContact.TabIndex = 46;
+            this.teaContacttxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaContacttxt.Location = new System.Drawing.Point(219, 228);
+            this.teaContacttxt.Name = "teaContacttxt";
+            this.teaContacttxt.Size = new System.Drawing.Size(176, 26);
+            this.teaContacttxt.TabIndex = 46;
             // 
-            // teaSubject
+            // teaSubjecttxt
             // 
-            this.teaSubject.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaSubject.FormattingEnabled = true;
-            this.teaSubject.Location = new System.Drawing.Point(219, 407);
-            this.teaSubject.Name = "teaSubject";
-            this.teaSubject.Size = new System.Drawing.Size(176, 26);
-            this.teaSubject.TabIndex = 45;
+            this.teaSubjecttxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaSubjecttxt.FormattingEnabled = true;
+            this.teaSubjecttxt.Location = new System.Drawing.Point(219, 407);
+            this.teaSubjecttxt.Name = "teaSubjecttxt";
+            this.teaSubjecttxt.Size = new System.Drawing.Size(176, 26);
+            this.teaSubjecttxt.TabIndex = 45;
             // 
             // label2
             // 
@@ -305,13 +317,13 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Subject";
             // 
-            // teaEmail
+            // teaEmailtxt
             // 
-            this.teaEmail.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaEmail.Location = new System.Drawing.Point(219, 371);
-            this.teaEmail.Name = "teaEmail";
-            this.teaEmail.Size = new System.Drawing.Size(176, 26);
-            this.teaEmail.TabIndex = 40;
+            this.teaEmailtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaEmailtxt.Location = new System.Drawing.Point(219, 371);
+            this.teaEmailtxt.Name = "teaEmailtxt";
+            this.teaEmailtxt.Size = new System.Drawing.Size(176, 26);
+            this.teaEmailtxt.TabIndex = 40;
             // 
             // label7
             // 
@@ -324,13 +336,13 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "E-Mail";
             // 
-            // teaAdd3
+            // teaAdd3txt
             // 
-            this.teaAdd3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaAdd3.Location = new System.Drawing.Point(219, 333);
-            this.teaAdd3.Name = "teaAdd3";
-            this.teaAdd3.Size = new System.Drawing.Size(176, 26);
-            this.teaAdd3.TabIndex = 39;
+            this.teaAdd3txt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaAdd3txt.Location = new System.Drawing.Point(219, 333);
+            this.teaAdd3txt.Name = "teaAdd3txt";
+            this.teaAdd3txt.Size = new System.Drawing.Size(176, 26);
+            this.teaAdd3txt.TabIndex = 39;
             // 
             // label8
             // 
@@ -343,13 +355,13 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Address Line2";
             // 
-            // teaAdd2
+            // teaAdd2txt
             // 
-            this.teaAdd2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaAdd2.Location = new System.Drawing.Point(219, 298);
-            this.teaAdd2.Name = "teaAdd2";
-            this.teaAdd2.Size = new System.Drawing.Size(176, 26);
-            this.teaAdd2.TabIndex = 38;
+            this.teaAdd2txt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaAdd2txt.Location = new System.Drawing.Point(219, 298);
+            this.teaAdd2txt.Name = "teaAdd2txt";
+            this.teaAdd2txt.Size = new System.Drawing.Size(176, 26);
+            this.teaAdd2txt.TabIndex = 38;
             // 
             // label9
             // 
@@ -362,45 +374,45 @@
             this.label9.TabIndex = 32;
             this.label9.Text = "Address Line3";
             // 
-            // teaAdd1
+            // teaAdd1txt
             // 
-            this.teaAdd1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaAdd1.Location = new System.Drawing.Point(219, 263);
-            this.teaAdd1.Name = "teaAdd1";
-            this.teaAdd1.Size = new System.Drawing.Size(176, 26);
-            this.teaAdd1.TabIndex = 37;
+            this.teaAdd1txt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaAdd1txt.Location = new System.Drawing.Point(219, 263);
+            this.teaAdd1txt.Name = "teaAdd1txt";
+            this.teaAdd1txt.Size = new System.Drawing.Size(176, 26);
+            this.teaAdd1txt.TabIndex = 37;
             // 
-            // teaID
+            // teaIDtxt
             // 
-            this.teaID.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaID.Location = new System.Drawing.Point(219, 82);
-            this.teaID.Name = "teaID";
-            this.teaID.Size = new System.Drawing.Size(103, 26);
-            this.teaID.TabIndex = 33;
+            this.teaIDtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaIDtxt.Location = new System.Drawing.Point(219, 82);
+            this.teaIDtxt.Name = "teaIDtxt";
+            this.teaIDtxt.Size = new System.Drawing.Size(103, 26);
+            this.teaIDtxt.TabIndex = 33;
             // 
-            // teaNIC
+            // teaNICtxt
             // 
-            this.teaNIC.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaNIC.Location = new System.Drawing.Point(219, 192);
-            this.teaNIC.Name = "teaNIC";
-            this.teaNIC.Size = new System.Drawing.Size(176, 26);
-            this.teaNIC.TabIndex = 36;
+            this.teaNICtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaNICtxt.Location = new System.Drawing.Point(219, 192);
+            this.teaNICtxt.Name = "teaNICtxt";
+            this.teaNICtxt.Size = new System.Drawing.Size(176, 26);
+            this.teaNICtxt.TabIndex = 36;
             // 
-            // teaFName
+            // teaFNametxt
             // 
-            this.teaFName.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaFName.Location = new System.Drawing.Point(219, 119);
-            this.teaFName.Name = "teaFName";
-            this.teaFName.Size = new System.Drawing.Size(176, 26);
-            this.teaFName.TabIndex = 34;
+            this.teaFNametxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaFNametxt.Location = new System.Drawing.Point(219, 119);
+            this.teaFNametxt.Name = "teaFNametxt";
+            this.teaFNametxt.Size = new System.Drawing.Size(176, 26);
+            this.teaFNametxt.TabIndex = 34;
             // 
-            // teaLName
+            // teaLNametxt
             // 
-            this.teaLName.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.teaLName.Location = new System.Drawing.Point(219, 156);
-            this.teaLName.Name = "teaLName";
-            this.teaLName.Size = new System.Drawing.Size(176, 26);
-            this.teaLName.TabIndex = 35;
+            this.teaLNametxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaLNametxt.Location = new System.Drawing.Point(219, 156);
+            this.teaLNametxt.Name = "teaLNametxt";
+            this.teaLNametxt.Size = new System.Drawing.Size(176, 26);
+            this.teaLNametxt.TabIndex = 35;
             // 
             // tabPage2
             // 
@@ -522,6 +534,19 @@
             // 
             this.teaMonth.Font = new System.Drawing.Font("Comic Sans MS", 10F);
             this.teaMonth.FormattingEnabled = true;
+            this.teaMonth.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
             this.teaMonth.Location = new System.Drawing.Point(333, 123);
             this.teaMonth.Name = "teaMonth";
             this.teaMonth.Size = new System.Drawing.Size(156, 26);
@@ -619,6 +644,7 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reports";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
             // 
             // button15
             // 
@@ -733,17 +759,6 @@
             this.button14.TabIndex = 26;
             this.button14.UseVisualStyleBackColor = false;
             // 
-            // lastID
-            // 
-            this.lastID.AutoSize = true;
-            this.lastID.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.lastID.ForeColor = System.Drawing.Color.White;
-            this.lastID.Location = new System.Drawing.Point(357, 83);
-            this.lastID.Name = "lastID";
-            this.lastID.Size = new System.Drawing.Size(31, 23);
-            this.lastID.TabIndex = 48;
-            this.lastID.Text = "ID";
-            // 
             // Teacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,16 +828,16 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label24;
-        public System.Windows.Forms.ComboBox teaSubject;
-        public System.Windows.Forms.TextBox teaEmail;
-        public System.Windows.Forms.TextBox teaAdd3;
-        public System.Windows.Forms.TextBox teaAdd2;
-        public System.Windows.Forms.TextBox teaAdd1;
-        public System.Windows.Forms.TextBox teaID;
-        public System.Windows.Forms.TextBox teaNIC;
-        public System.Windows.Forms.TextBox teaFName;
-        public System.Windows.Forms.TextBox teaLName;
-        public System.Windows.Forms.TextBox teaContact;
+        public System.Windows.Forms.ComboBox teaSubjecttxt;
+        public System.Windows.Forms.TextBox teaEmailtxt;
+        public System.Windows.Forms.TextBox teaAdd3txt;
+        public System.Windows.Forms.TextBox teaAdd2txt;
+        public System.Windows.Forms.TextBox teaAdd1txt;
+        public System.Windows.Forms.TextBox teaIDtxt;
+        public System.Windows.Forms.TextBox teaNICtxt;
+        public System.Windows.Forms.TextBox teaFNametxt;
+        public System.Windows.Forms.TextBox teaLNametxt;
+        public System.Windows.Forms.TextBox teaContacttxt;
         public System.Windows.Forms.RadioButton teaAllRbn;
         public System.Windows.Forms.RadioButton teaSubRbn;
         public System.Windows.Forms.ComboBox teaSubCombo;
@@ -830,6 +845,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox teaPayType;
-        private System.Windows.Forms.Label lastID;
+        private System.Windows.Forms.Label lastIDlbl;
     }
 }
