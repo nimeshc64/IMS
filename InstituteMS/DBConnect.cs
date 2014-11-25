@@ -37,41 +37,61 @@ namespace InstituteMS
             }
             
             int check;
-            public void dmlQuery(string query,int type) {
-               
-                cmd.CommandText = query;
-                checkConn();
-                check = cmd.ExecuteNonQuery();
-                checkConn();
+            public void DMLQuery(string query,int type) {
+                try
+                {
+                    cmd.CommandText = query;
+                    checkConn();
+                    check = cmd.ExecuteNonQuery();
+                    checkConn();
 
-                if (check == 1 && type == 1) {
-                    MessageBox.Show("Saved Success");
+                    if (check == 1 && type == 1)
+                    {
+                        MessageBox.Show("Saved Success");
+                    }
+                    else if (check == 1 && type == 2)
+                    {
+                        MessageBox.Show("Modify Success");
+                    }
+                    else if (check == 1 && type == 3)
+                    {
+                        MessageBox.Show("Delete Success");
+                    }
+                    else if (check != 1 && type == 1)
+                    {
+                        MessageBox.Show("Not saved");
+                    }
+                    else if (check != 1 && type == 1)
+                    {
+                        MessageBox.Show("Not Modified");
+                    }
+                    else if (check != 1 && type == 1)
+                    {
+                        MessageBox.Show("Not Deleted");
+                    }
                 }
-                else if (check == 1 && type == 2) {
-                    MessageBox.Show("Modify Success");
+                catch (MySqlException e) {
+                    if (e.Number != 2627) {
+
+                        MessageBox.Show("You Haved Already Used This ID. Please Use anotherone");
+                    }
                 }
-                else if(check ==1 && type ==3){
-                    MessageBox.Show("Delete Success");
-                }
-                else if (check != 1 && type == 1) {
-                    MessageBox.Show("Not saved");
-                }
-                else if (check != 1 && type == 1) {
-                    MessageBox.Show("Not Modified");
-                } 
-                else if(check !=1 && type == 1){
-                    MessageBox.Show("Not Deleted");
+
+                catch (Exception e)
+                {
+
+                    MessageBox.Show(e.Message);
                 }
                 
             }
-            public MySqlDataReader ddlQuery(string query) {
+            public MySqlDataReader DDLQuery(string query) {
                 cmd.CommandText = query;
                 checkConn();
                 read = cmd.ExecuteReader();
                 checkConn();
                 return read;
             }
-            public DataTable tableResult(string query) {
+            public DataTable TableResult(string query) {
                 cmd.CommandText = query;
                 checkConn();
                 adp = new MySqlDataAdapter(cmd);
@@ -80,6 +100,15 @@ namespace InstituteMS
                 checkConn();
 
                 return table;
+            }
+         public int maxId;
+            public int GetLastID(string query) {
+                cmd.CommandText = query;
+                checkConn();
+                maxId = int.Parse(cmd.ExecuteScalar().ToString());
+                checkConn();
+                    
+                return maxId;
             }
     }
 }

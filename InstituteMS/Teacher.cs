@@ -71,7 +71,7 @@ namespace InstituteMS
         private void teaAllRbn_CheckedChanged(object sender, EventArgs e)
         {
             InternalTeachers tr = new InternalTeachers();
-            teaReportGrid.DataSource = tr.ReportAllDetails();
+          //  teaReportGrid.DataSource = tr.ReportAllDetails();
             
         }
 
@@ -93,7 +93,7 @@ namespace InstituteMS
             }
             else
             {
-                teaReportGrid.DataSource = tea.ReportSubject(teaSubCombo.Text);
+                //teaReportGrid.DataSource = tea.ReportSubject(teaSubCombo.Text);
             }
         }
 

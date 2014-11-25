@@ -35,24 +35,24 @@ namespace InstituteMS
         }
         public override void RegisterTeacher() {
 
-            try
-            {
-               command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
-               db.dmlQuery(command, 1);
-            }
-            catch { 
+            //try
+            //{
+            //   command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
+            //   db.dmlQuery(command, 1);
+            //}
+            //catch { 
             
-            }
+            //}
         }
         public override void ModifyTeacher() {
-            try
-            {
-               command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
-               db.dmlQuery(command, 2);
-            }
-            catch { 
+            //try
+            //{
+            //   command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
+            //   db.dmlQuery(command, 2);
+            //}
+            //catch { 
             
-            }
+            //}
         }
         public void DeleteTeacher() { 
         
@@ -92,24 +92,24 @@ namespace InstituteMS
         //    return new Tuple<string, string, string>(a, b, c);
         //}
 
-        public DataTable ReportAllDetails()
-        { 
-            command = "SELECT *FROM "+db.dbName+".Teachers";
-            return db.tableResult(command);
+       // public DataTable ReportAllDetails()
+      //  { 
+      // //     command = "SELECT *FROM "+db.dbName+".Teachers";
+      //   //   return db.tableResult(command);
            
-        }
+      //  }
 
-        public DataTable ReportSubject(string subj) {
-            command = "SELECT *FROM " + db.dbName + ".Teachers WHERE subName='" +subj+ "'";
-            return db.tableResult(command);
-        }
+      ////  public DataTable ReportSubject(string subj) {
+      ////      command = "SELECT *FROM " + db.dbName + ".Teachers WHERE subName='" +subj+ "'";
+      //  //    return db.tableResult(command);
+      //  }
 
-        public DataTable getTeachers()
-        {
+      //  //public DataTable getTeachers()
+      // // {
 
-            command = "SELECT teaid,fname,lname FROM " + db.dbName + ".Teachers ";
-            return db.tableResult(command);
-        }
+      // //     command = "SELECT teaid,fname,lname FROM " + db.dbName + ".Teachers ";
+      //     // return db.tableResult(command);
+     //   }
 
         public int GetLastTeachersID() {
             command = "SELECT MAX(teaid) FROM "+db.dbName+".Teachers";

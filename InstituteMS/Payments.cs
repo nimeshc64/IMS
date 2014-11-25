@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Collections;
 
 namespace InstituteMS
 {
@@ -16,5 +17,12 @@ namespace InstituteMS
         public string payDate;
         public float amount;
         public Image stuphoto;
+        public byte[] img;
+        public string data;
+        public string classid;
+        public int max;
+        public string status;
+    
+
     }
 }

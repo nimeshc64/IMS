@@ -21,7 +21,7 @@ namespace InstituteMS
         {
            InternalTeachers tea = new InternalTeachers();
            CommonClass commcls = new CommonClass();
-           couTeaDetails.DataSource =  tea.getTeachers();
+          // couTeaDetails.DataSource =  tea.getTeachers();
            clsLastId.Text= commcls.GetLastClassID().ToString();
         }
 

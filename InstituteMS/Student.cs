@@ -30,27 +30,36 @@ namespace InstituteMS
             InitializeComponent();
             CamDevice();
             dategen();
+            showstunewid();
+            fillallgrid();
         }
         DBConnect db = new DBConnect();
         QrEncod encode = new QrEncod();
         ALstudents alstu = new ALstudents();
         StudentPayments stupay = new StudentPayments();
+        Validation valid = new Validation();
 
         //-------------------------------Register Start---------------------------------------------//
         private void StuAid_TextChanged(object sender, EventArgs e)
+        {        
+        }
+
+        public void showstunewid()
         {
-            if (StuRid.Text == null)
+            db.GetLastID("SELECT MAX(stuID) FROM ims.student");
+            if (db.maxId == 0)
             {
-                StuRqrpic.Image = null;
+                db.maxId = 1;
             }
             else
             {
+                db.maxId += 1;
+                StuRid.Text = db.maxId.ToString();
                 encode.SetData(StuRid.Text);
                 encode.Encoding();
-                encode.GetImage();
-                StuRqrpic.Image = encode.GetImage();
+                StuRqrpic.Image=encode.GetImage();
             }
-        }        
+        }
         private void StuAprint_Click(object sender, EventArgs e)
         {
           //ptineter//
@@ -73,14 +82,45 @@ namespace InstituteMS
         }
         public void setTextBoxValues()
         {
-            alstu.SetStudentValues(int.Parse(StuRid.Text), StuRfname.Text, StuRlname.Text, StuRadd1.Text, StuRadd2.Text, StuRadd3.Text, Gender, int.Parse(StuRcontact.Text), StuRstupic.Image);
-
+            alstu.SetStudentValues(int.Parse(StuRid.Text), StuRfname.Text, StuRlname.Text, StuRadd1.Text, StuRadd2.Text, StuRadd3.Text, Gender, int.Parse(StuRcontact.Text),filename);
         }
+        public void clearbox()
+        {
+            showstunewid();
+            StuRfname.Clear();
+            StuRlname.Clear();
+            StuRadd1.Clear();
+            StuRadd2.Clear();
+            StuRadd3.Clear();
+            StuRcontact.Clear();
+            StuRstupic.Image = null;
+            StuRfemale.Checked = false;
+            StuRmale.Checked = false;
+            StuAstuid.Clear();
+            StuAstatus.BackColor = Color.Transparent;
+            StuApaynow.Visible = false;
+            StuAcancel.Visible = false;
+            StuAstupic.Image = null;
+            StuPid.Clear();
+            StuPyear.Clear();
+            StuPfees.Clear();
+            StuPname.Clear();
+            Stuppic.Image = null;
+        }
+ 
         private void StuAsavebtn_Click(object sender, EventArgs e)
         {
-            gender();
-            setTextBoxValues();
-            alstu.RegisterStudents(filename);
+                if (StuRfname.Text==""||StuRlname.Text==""||StuRadd1.Text==""||StuRadd2.Text==""||StuRadd3.Text==""||StuRcontact.Text==""||Gender=="")
+                {
+                   MessageBox.Show("Fill All The TextBox","Message");
+                }
+                else
+                {
+                    gender();
+                    setTextBoxValues();
+                    alstu.RegisterStudents();
+                    clearbox();
+                }             
         }
 
         private void StuAupdatebtn_Click(object sender, EventArgs e)
@@ -92,51 +132,57 @@ namespace InstituteMS
 
         private void StuAdeletebtn_Click(object sender, EventArgs e)
         {
-            setTextBoxValues();
-            alstu.DeleteStudents();
+            alstu.DeleteStudents(StuRid.Text);
+            showstunewid();
         }
-        string filename;
+        public string filename;
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            //openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|PNG Image|*.png|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-            openFileDialog1.FileName = string.Empty;
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
-                filename = openFileDialog1.FileName;
-                StuRstupic.Image = new Bitmap(filename);
+                string picloca = dlg.FileName.ToString();
+                filename = picloca;
+                StuRstupic.ImageLocation = picloca;
+            }        
+        }
+        private void StuAsearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              
+                alstu.SearchStudents(StuRid.Text);
+ 
+                    // StuRid.Text = alstu.list[0].ToString();
+                    StuRfname.Text = alstu.list[1].ToString();
+                    StuRlname.Text = alstu.list[2].ToString();
+                    StuRadd1.Text = alstu.list[3].ToString();
+                    StuRadd2.Text = alstu.list[4].ToString();
+                    StuRadd3.Text = alstu.list[5].ToString();
+                    Gender = alstu.list[6].ToString();
+                    if (Gender == "f")
+                    {
+                        StuRfemale.Checked = true;
+                    }
+                    else
+                    {
+                        StuRmale.Checked = true;
+                    }
+                    StuRcontact.Text = alstu.list[7].ToString();
+                    alstu.studentimage(StuRid.Text);
+                    StuRstupic.Image = alstu.picture; 
                 
             }
-        
-        }
-        
-        private void StuAsearch_Click(object sender, EventArgs e)
-        {  
-            alstu.SearchStudents(StuRid.Text);
-            StuRid.Text = alstu.list[0].ToString();
-            StuRfname.Text = alstu.list[1].ToString();
-            StuRlname.Text = alstu.list[2].ToString();
-            StuRadd1.Text = alstu.list[3].ToString();
-            StuRadd2.Text = alstu.list[4].ToString();
-            StuRadd3.Text = alstu.list[5].ToString();
-            Gender = alstu.list[6].ToString();
-            if (Gender == "f")
-            {
-                StuRfemale.Checked = true;
+            catch (Exception ex){
+
             }
-            else
-            {
-                StuRmale.Checked = true;
-            }
-            StuRcontact.Text = alstu.list[7].ToString();
-            alstu.studentimage(StuRid.Text);
-            StuRstupic.Image = alstu.Stuphoto;
+          
             alstu.list.Clear();
         }
+
+       
         //-------------------Register End-------------------------------//
 
         //-------------------------Attendenc Start------------------------------------------//
@@ -176,8 +222,11 @@ namespace InstituteMS
           
         }
         string monthcheck;
+        string idcheck;
+      
         private void StuAtimer_Tick(object sender, EventArgs e)
         {
+
             if (StuAvideoPlayer.GetCurrentVideoFrame() != null)
             {
                 Bitmap img = new Bitmap(StuAvideoPlayer.GetCurrentVideoFrame());
@@ -191,34 +240,41 @@ namespace InstituteMS
                     }
                     else
                     {
-                        DateTime dt = DateTime.Now;
-                        var months = System.Globalization.DateTimeFormatInfo.InvariantInfo.MonthNames;
-                        StuAstuid.Text = result.ToString();
-                        stupay.stupatmentcheck(result.ToString());
-                        stupay.stupic(result.ToString());
-                        StuAstupic.Image = stupay.stuphoto;
-                        monthcheck= stupay.data.ToString();
-                        if (monthcheck !=DateTime.Now.Date.ToString("MMMM"))
-                        {
-                            StuAsatus.BackColor = Color.Red;
-                            Console.Beep(2000,1000);
+                        StuAstuid.Text = result.ToString();               
+                        stupay.stupaymentcheck(StuAstuid.Text);
+                        alstu.studentimage(StuAstuid.Text);
+                        StuAstupic.Image = alstu.picture;
+                      
+                        if (stupay.status == "True")
+                        {                          
+                            StuAstatus.BackColor = Color.Green;
+                            StuApaynow.Visible = false;
+                            StuAcancel.Visible = false;
+                        }
+                        else
+                        {                           
+                            StuAstatus.BackColor = Color.Red;
                             StuApaynow.Visible = true;
                             StuAcancel.Visible = true;
+                            Console.Beep(2000, 1000);
                         }
-                         
-                        img.Dispose();
-                    }
 
+                    }
                 }
                 catch (Exception ex)
                 {
                 }
-
+                img.Dispose();
             }
         }
+       
         private void StuApaynow_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab("tabPage3");
+        }
+        private void StuAcancel_Click(object sender, EventArgs e)
+        {
+            clearbox();
         }
         //-----------------------------------Attendence end----------------------------//
         //-----------------------------------Payment strart--------------------------------//
@@ -232,23 +288,57 @@ namespace InstituteMS
 
         private void StuPsave_Click(object sender, EventArgs e)
         {
-            string month = StuPmonth.SelectedValue.ToString();
-            int year = int.Parse(StuPyear.Text);
-            float amount = int.Parse(StuPfees.Text);
-             stupay.SetValues(month, year, amount);
-             stupay.SaveStuPayments(int.Parse(StuPid.Text));
+            db.GetLastID("SELECT MAX(stuPayID) FROM ims.studentpayments");
+            if (db.maxId == 0)
+            {
+                db.maxId = 1;
+            }
+            else
+            {
+                db.maxId += 1;
+                string month = StuPmonth.SelectedValue.ToString();
+                int year = int.Parse(StuPyear.Text);
+                float amount = int.Parse(StuPfees.Text);
+                stupay.SetValues(db.maxId, month, year, amount);
+                stupay.stuclassselect(StuPid.Text);
+                stupay.SaveStuPayments(int.Parse(StuPid.Text));
+                clearbox();
+                dategen();
+            }
+           
         }
         private void StuPsearch_Click(object sender, EventArgs e)
         {
-            alstu.SearchStudents(StuPid.Text);
-            StuPname.Text = alstu.list[1].ToString();
-            if (alstu.list[1] == null)
+            try
             {
-                MessageBox.Show("Error");
+                if (StuPname.Text == null)
+                {
+                    clearbox();
+                }
+                else
+                {
+                    alstu.SearchStudents(StuPid.Text);
+                    alstu.studentimage(StuPid.Text);
+                    Stuppic.Image = alstu.picture;
+                    StuPname.Text = alstu.list[1].ToString();
+                    if (alstu.list[1] == null)
+                    {
+                        MessageBox.Show("Error");
+                    }
+                    alstu.list.Clear();
+                }
             }
-            alstu.list.Clear();
-            alstu.studentimage(StuPid.Text);
-            Stuppic.Image = alstu.Stuphoto;
+            catch (Exception ex)
+            {
+            } 
+        }
+
+        public void fillallgrid()
+        {
+            stupay.fillgrid();
+            StuPgrid.DataSource = stupay.grid;
+            alstu.fillgrid();
+            StuRgridviwe.DataSource = alstu.grid;
         }
 
         private void StuPid_TextChanged(object sender, EventArgs e)
@@ -256,10 +346,48 @@ namespace InstituteMS
 
         }
 
+        private void StuRcontact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void StuPfees_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }      
+        private void StuAstuid_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void StuRqrpic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StuRcontact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StuPyear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void StuRgridviwe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Student_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+
+      
+
        
-        
-
-
-        
+       
     }
 }
