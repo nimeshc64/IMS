@@ -101,11 +101,18 @@ namespace InstituteMS
 
                 return table;
             }
+<<<<<<< HEAD
          public int maxId;
             public int GetLastID(string query) {
                 cmd.CommandText = query;
                 checkConn();
                 maxId = int.Parse(cmd.ExecuteScalar().ToString());
+=======
+            public int GetLastID(string query) {
+                cmd.CommandText = query;
+                checkConn();
+                int maxId = int.Parse(cmd.ExecuteScalar().ToString());
+>>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
                 checkConn();
                     
                 return maxId;

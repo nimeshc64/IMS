@@ -17,15 +17,15 @@ namespace InstituteMS
         {
             InitializeComponent();
         }
-        InternalTeachers tea = new InternalTeachers();
+        InternalTeachers interteach = new InternalTeachers();
         DBConnect db = new DBConnect();
         TeachersPayments teaPay = new TeachersPayments();
         private void button1_Click(object sender, EventArgs e)
         {
-
             setTextBoxValues();
-            tea.RegisterTeacher();
-
+            interteach.RegisterTeacher();
+            lastIDlbl.Text = interteach.GetLastTeachersID().ToString();
+            ClearAllFields();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -36,7 +36,8 @@ namespace InstituteMS
         private void button2_Click(object sender, EventArgs e)
         {
             setTextBoxValues();
-            tea.ModifyTeacher();
+            interteach.ModifyTeacher();
+            ClearAllFields();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -44,24 +45,23 @@ namespace InstituteMS
 
         }
         public void setTextBoxValues() {
-            tea.setTeacherValues(int.Parse(teaID.Text), teaFName.Text, teaLName.Text, teaContact.Text, teaNIC.Text, teaAdd1.Text, teaAdd2.Text, teaAdd3.Text, teaEmail.Text, teaSubject.Text);
+            interteach.setTeacherValues(int.Parse(teaIDtxt.Text), teaFNametxt.Text, teaLNametxt.Text, teaContacttxt.Text, teaNICtxt.Text, teaAdd1txt.Text, teaAdd2txt.Text, teaAdd3txt.Text, teaEmailtxt.Text, teaSubjecttxt.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            tea.SearchTeacher(teaID.Text);
-            teaID.Text = tea.list[0].ToString();
-            teaFName.Text = tea.list[1].ToString();
-            teaLName.Text = tea.list[2].ToString();
-            teaNIC.Text = tea.list[3].ToString();
-            teaContact.Text = tea.list[4].ToString();
-            teaAdd1.Text = tea.list[5].ToString();
-            teaAdd2.Text = tea.list[6].ToString();
-            teaAdd3.Text = tea.list[7].ToString();
-            teaEmail.Text = tea.list[8].ToString();
-            teaSubject.Text = tea.list[9].ToString();
-            tea.list.Clear();
+            InternalTeachers interteach = new InternalTeachers();
+            interteach.teacId = int.Parse(teaIDtxt.Text);
+            interteach.SearchTeacher();
+            teaFNametxt.Text = interteach.teacFName;
+            teaLNametxt.Text = interteach.teacLName;
+            teaNICtxt.Text = interteach.teacNIC;
+            teaContacttxt.Text = interteach.teacContact;
+            teaAdd1txt.Text = interteach.teaAdd1;
+            teaAdd2txt.Text = interteach.teaAdd2;
+            teaAdd3txt.Text = interteach.teaAdd3;
+            teaEmailtxt.Text = interteach.teacEmail;
+            teaSubjecttxt.Text = interteach.teaSubject;
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -70,8 +70,13 @@ namespace InstituteMS
         }
         private void teaAllRbn_CheckedChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             InternalTeachers tr = new InternalTeachers();
           //  teaReportGrid.DataSource = tr.ReportAllDetails();
+=======
+            InternalTeachers interteach = new InternalTeachers();
+            teaReportGrid.DataSource = interteach.ReportAllDetails();
+>>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
             
         }
 
@@ -93,7 +98,11 @@ namespace InstituteMS
             }
             else
             {
+<<<<<<< HEAD
                 //teaReportGrid.DataSource = tea.ReportSubject(teaSubCombo.Text);
+=======
+                teaReportGrid.DataSource = interteach.ReportSubject(teaSubCombo.Text);
+>>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
             }
         }
 
@@ -104,13 +113,13 @@ namespace InstituteMS
 
         private void Teacher_Load(object sender, EventArgs e)
         {
-            lastID.Text = tea.GetLastTeachersID().ToString();
+            lastIDlbl.Text = interteach.GetLastTeachersID().ToString();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             int id = int.Parse(teaIDPay.Text);
-            int month = int.Parse(teaMonth.Text) ;
+            string month = teaMonth.Text ;
             int year =int.Parse( teaYear.Text);
             string type = null;
             if (teaPayType.SelectedIndex  == 0){
@@ -130,5 +139,45 @@ namespace InstituteMS
         {
 
         }
+        public void ClearAllFields() {
+            teaIDtxt.Clear();
+            teaFNametxt.Clear();
+            teaLNametxt.Clear();
+            teaNICtxt.Clear();
+            teaContacttxt.Clear();
+            teaAdd1txt.Clear();
+            teaAdd2txt.Clear();
+            teaAdd3txt.Clear();
+            teaEmailtxt.Clear();
+            teaSubjecttxt.Text = "";
+        
+        
+        }
+
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            InternalTeachers interteach = new InternalTeachers();
+             
+
+            teaSubjecttxt.Items.Clear();
+            for (int c = 0; c < interteach.GetSubjects().Rows.Count; c++)
+            {
+                teaSubjecttxt.Items.Add(interteach.GetSubjects().Rows[c][0].ToString());
+            }
+
+        }
+
+        private void tabPage3_Enter(object sender, EventArgs e)
+        {
+            InternalTeachers interteach = new InternalTeachers();
+
+
+            teaSubjecttxt.Items.Clear();
+            for (int c = 0; c < interteach.GetSubjects().Rows.Count; c++)
+            {
+                teaSubCombo.Items.Add(interteach.GetSubjects().Rows[c][0].ToString());
+            }
+        }
+       
     }
 }

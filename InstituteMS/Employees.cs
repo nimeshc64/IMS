@@ -8,43 +8,114 @@ namespace InstituteMS
 {
     class Employees
     {
-        public int empId;
-        public string empFName;
-        public string empLName;
-        public string empNIC;
-        public string empAdd1;
-        public string empAdd2;
-        public string empAdd3;
-        public string empContact;
-        public string command;
-        DBConnect db = new DBConnect();
-        public void RegisterEmployee() {
-            command = "INSERT INTO "+db.dbName+".employee(empid,fname,lname,nic,add1,add2,add3,contact) VALUES('"+this.empId+"','"+this.empFName+"','"+this.empLName+"','"+this.empNIC+"','"+this.empAdd1+"','"+this.empAdd2+"','"+this.empAdd3+"','"+this.empContact+"') ";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
-        }
-        public void ModifyEmployee() {
-            command = "UPDATE "+db.dbName+".employee SET fname='"+this.empFName+"',lname='"+this.empLName+"',nic='"+this.empNIC+"',add1='"+this.empAdd1+"',add2='"+this.empAdd2+"',add3='"+this.empAdd3+"',contact='"+this.empContact+"' WHERE empid ='"+this.empId+"'";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
-        }
-        public void DeleteEmployee() {
-            command = "DELETE FROM "+db.dbName+".employee WHERE empid='"+this.empId+"'";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
+        private int empId;
+        private string empFName;
+        private string empLName;
+        private string empNIC;
+        private string empAdd1;
+        private string empAdd2;
+        private string empAdd3;
+        private string empContact;
 
-        
+        public int emplid
+        {
+            get
+            {
+                return this.empId;
+            }
+            set
+            {
+                empId = value;
+            }
+
         }
-        public int GetLastEmployeeId() {
-            command = "SELECT MAX(empid) F";
-            return 2;
+
+        public string emplFName
+        {
+            get
+            {
+                return this.empFName;
+            }
+            set
+            {
+                empFName = value;
+            }
+
         }
+
+        public string emplLName
+        {
+            get
+            {
+                return this.empLName;
+            }
+            set
+            {
+                empLName = value;
+            }
+        }
+
+        public string emplNIC
+        {
+            get
+            {
+                return this.empNIC;
+            }
+            set
+            {
+                empNIC = value;
+            }
+
+        }
+        public string emplAdd1
+        {
+            get
+            {
+                return this.empAdd1;
+            }
+            set
+            {
+                empAdd1 = value;
+            }
+        }
+
+        public string emplAdd2
+        {
+            get
+            {
+                return this.empAdd2;
+            }
+            set
+            {
+                empAdd2 = value;
+            }
+
+        }
+
+        public string emplAdd3
+        {
+            get
+            {
+                return this.empAdd3;
+            }
+            set
+            {
+                empAdd3 = value;
+            }
+        }
+        public string emplContact
+        {
+            get
+            {
+                return this.empContact;
+            }
+            set
+            {
+                empContact = value;
+            }
+
+        }
+       
 
     }
 }

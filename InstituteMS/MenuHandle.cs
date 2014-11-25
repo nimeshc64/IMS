@@ -8,8 +8,17 @@ namespace InstituteMS
 {
     class MenuHandle
     {
-        
-       
-        
+
+        public string GetDate() {
+            DateTime datetime = DateTime.Now;
+            string date = datetime.ToString("yyyy:mm:dd");
+            return date;
+        }
+
+        public string GetYear() {
+            DateTime date = DateTime.Now;
+            string year = date.ToString("yyyy");
+            return year;
+        }
     }
 }

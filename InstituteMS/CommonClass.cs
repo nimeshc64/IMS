@@ -19,66 +19,68 @@ namespace InstituteMS
 
 
         public void RegisterClass() {
-            command = "INSERT INTO "+db.dbName+".class(classid,day,starttime,endtime,batch,fee,teachid) VALUES('"+this.classID+"','"+this.day+"','"+this.startTime+"','"+this.endTime+"','"+this.batch+"','"+this.fees+"','"+this.teaid+"')";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
+            command = "INSERT INTO "+db.dbName+".class(classid,day,starttime,endtime,batch,fee,teachid) VALUES('"+clsId+"','"+clsDay+"','"+clsStartTime+"','"+clsEndTime+"','"+clsBatch+"','"+clsFees+"','"+clsTeaId+"')";
+            db.DMLQuery(command, 1);
         }
+        public void SearchClass() {
+            try
+            {
+                command = "SELECT * FROM " + db.dbName + ".class WHERE classid ='" + clsId + "'";
+                DataTable serClass = db.TableResult(command);
 
+                clsDay = serClass.Rows[0][1].ToString();
+                clsStartTime = serClass.Rows[0][2].ToString();
+                clsEndTime = serClass.Rows[0][3].ToString();
+                clsBatch = serClass.Rows[0][4].ToString();
+                clsFees = int.Parse(serClass.Rows[0][5].ToString());
+                clsTeaId = int.Parse(serClass.Rows[0][6].ToString());
+            }
+            catch { }
+        }
         public void DeleteClass() {
-            command = "DELETE FROM "+db.dbName+".class WHERE classID='"+this.classID+"'";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
+            command = "DELETE FROM "+db.dbName+".class WHERE classID='"+clsId+"'";
+            db.DMLQuery(command, 3);
         }
         public void ModifyClass() {
-            command = "UPDATE "+db.dbName+".class SET day='"+this.day+"',starttime ='"+this.startTime+"' ,endtime='"+this.endTime+"', batch='"+this.batch+"',fee ='"+this.fees+"',teachid ='"+this.teaid+"' WHERE classID = '"+this.classID+"' ";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
+            command = "UPDATE "+db.dbName+".class SET day='"+clsDay+"',starttime ='"+clsStartTime+"' ,endtime='"+clsEndTime+"', batch='"+clsBatch+"',fee ='"+clsFees+"',teachid ='"+clsTeaId+"' WHERE classID = '"+clsId+"' ";
+            db.DMLQuery(command, 2);
         }
         public int GetLastClassID() {
             command = "SELECT MAX(classid) FROM " + db.dbName + ".class";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            int LastID = int.Parse(db.cmd.ExecuteScalar().ToString());
-            db.checkConn();
-            return LastID;
+            try
+            {
+                
+                return db.GetLastID(command);
+            }
+            catch {
+                return db.GetLastID(command);
+            }
 
         }
-        public void SetValues(int clsid,int teaid,string batch,string day,string startTime,string endTime,double fees) {
-            this.classID = clsid;
-            this.teaid = teaid;
-            this.batch = batch;
-            this.day = day;
-            this.startTime = startTime;
-            this.endTime = endTime;
-            this.fees = fees;
+        public void SetValues(int clsid,int teaId,string batch,string day,string startTime,string endTime,double fees) {
+            clsId = clsid;
+            clsTeaId = teaId;
+            clsBatch = batch;
+            clsDay = day;
+            clsStartTime = startTime;
+            clsEndTime = endTime;
+            clsFees = fees;
 
         
         }
         public DataTable ReportAllDetails()
         {
-            command = "SELECT *FROM " + db.dbName + ".class";
-            db.cmd.CommandText = command;
-            db.checkConn();
-            MySqlDataAdapter dataAdap = new MySqlDataAdapter(db.cmd);
-            dTable = new DataTable();
-            dataAdap.Fill(dTable);
-            db.checkConn();
-
-            return dTable;
+            command = "SELECT cls.classid,cls.day,cls.starttime,cls.endtime,cls.batch,cls.fee,tea.fname As TeacherFirstName,tea.lname As TeacherLastName FROM " + db.dbName + ".Teachers tea JOIN " + db.dbName + ".class cls WHERE tea.teaid = cls.teachid";
+            return db.TableResult(command);
 
         }
         public void ClassesSubReport() { 
-        
+            
         }
-        public void ClassesDayReports() { 
-        
-        
+        public DataTable ClassesDayReports()
+        { 
+            command = "SELECT cls.classid,cls.day,cls.starttime,cls.endtime,cls.batch,cls.fee,tea.fname,tea.lname FROM " + db.dbName + ".Teachers tea JOIN " + db.dbName + ".class cls WHERE tea.teaid = cls.teachid AND cls.day='"+clsDay+"'";
+            return db.TableResult(command);
         }
         
     

@@ -30,17 +30,19 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.clsEndTime = new System.Windows.Forms.ComboBox();
-            this.clsStartTime = new System.Windows.Forms.ComboBox();
+            this.teaIdSelectlbl = new System.Windows.Forms.TextBox();
+            this.labe = new System.Windows.Forms.Label();
+            this.clsEndTimecmb = new System.Windows.Forms.ComboBox();
+            this.clsStartTimecmb = new System.Windows.Forms.ComboBox();
             this.clsLastId = new System.Windows.Forms.Label();
             this.couTeaDetails = new System.Windows.Forms.DataGridView();
-            this.clsDay = new System.Windows.Forms.ComboBox();
-            this.clsID = new System.Windows.Forms.TextBox();
+            this.clsDaycmb = new System.Windows.Forms.ComboBox();
+            this.clsIDtxt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.clsFee = new System.Windows.Forms.TextBox();
-            this.clsBatch = new System.Windows.Forms.TextBox();
+            this.clsFeetxt = new System.Windows.Forms.TextBox();
+            this.clsBatchtxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +52,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.clsGridView = new System.Windows.Forms.DataGridView();
             this.clsAllRbn = new System.Windows.Forms.RadioButton();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.days = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,8 +62,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.labe = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.couTeaDetails)).BeginInit();
@@ -78,25 +79,26 @@
             this.tabControl1.Location = new System.Drawing.Point(9, 118);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 503);
+            this.tabControl1.Size = new System.Drawing.Size(837, 503);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.teaIdSelectlbl);
             this.tabPage1.Controls.Add(this.labe);
-            this.tabPage1.Controls.Add(this.clsEndTime);
-            this.tabPage1.Controls.Add(this.clsStartTime);
+            this.tabPage1.Controls.Add(this.clsEndTimecmb);
+            this.tabPage1.Controls.Add(this.clsStartTimecmb);
             this.tabPage1.Controls.Add(this.clsLastId);
             this.tabPage1.Controls.Add(this.couTeaDetails);
-            this.tabPage1.Controls.Add(this.clsDay);
-            this.tabPage1.Controls.Add(this.clsID);
+            this.tabPage1.Controls.Add(this.clsDaycmb);
+            this.tabPage1.Controls.Add(this.clsIDtxt);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.clsFee);
-            this.tabPage1.Controls.Add(this.clsBatch);
+            this.tabPage1.Controls.Add(this.clsFeetxt);
+            this.tabPage1.Controls.Add(this.clsBatchtxt);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -106,28 +108,48 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 467);
+            this.tabPage1.Size = new System.Drawing.Size(829, 467);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // clsEndTime
+            // teaIdSelectlbl
             // 
-            this.clsEndTime.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.clsEndTime.FormattingEnabled = true;
-            this.clsEndTime.Location = new System.Drawing.Point(167, 213);
-            this.clsEndTime.Name = "clsEndTime";
-            this.clsEndTime.Size = new System.Drawing.Size(196, 26);
-            this.clsEndTime.TabIndex = 50;
+            this.teaIdSelectlbl.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.teaIdSelectlbl.Location = new System.Drawing.Point(167, 64);
+            this.teaIdSelectlbl.Name = "teaIdSelectlbl";
+            this.teaIdSelectlbl.ReadOnly = true;
+            this.teaIdSelectlbl.Size = new System.Drawing.Size(75, 26);
+            this.teaIdSelectlbl.TabIndex = 52;
             // 
-            // clsStartTime
+            // labe
             // 
-            this.clsStartTime.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.clsStartTime.FormattingEnabled = true;
-            this.clsStartTime.Location = new System.Drawing.Point(167, 176);
-            this.clsStartTime.Name = "clsStartTime";
-            this.clsStartTime.Size = new System.Drawing.Size(196, 26);
-            this.clsStartTime.TabIndex = 49;
+            this.labe.AutoSize = true;
+            this.labe.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.labe.ForeColor = System.Drawing.Color.White;
+            this.labe.Location = new System.Drawing.Point(24, 67);
+            this.labe.Name = "labe";
+            this.labe.Size = new System.Drawing.Size(95, 23);
+            this.labe.TabIndex = 51;
+            this.labe.Text = "Teacher ID";
+            // 
+            // clsEndTimecmb
+            // 
+            this.clsEndTimecmb.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.clsEndTimecmb.FormattingEnabled = true;
+            this.clsEndTimecmb.Location = new System.Drawing.Point(167, 213);
+            this.clsEndTimecmb.Name = "clsEndTimecmb";
+            this.clsEndTimecmb.Size = new System.Drawing.Size(196, 26);
+            this.clsEndTimecmb.TabIndex = 50;
+            // 
+            // clsStartTimecmb
+            // 
+            this.clsStartTimecmb.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.clsStartTimecmb.FormattingEnabled = true;
+            this.clsStartTimecmb.Location = new System.Drawing.Point(167, 176);
+            this.clsStartTimecmb.Name = "clsStartTimecmb";
+            this.clsStartTimecmb.Size = new System.Drawing.Size(196, 26);
+            this.clsStartTimecmb.TabIndex = 49;
             // 
             // clsLastId
             // 
@@ -143,27 +165,37 @@
             // couTeaDetails
             // 
             this.couTeaDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.couTeaDetails.Location = new System.Drawing.Point(397, 24);
+            this.couTeaDetails.Location = new System.Drawing.Point(458, 23);
             this.couTeaDetails.Name = "couTeaDetails";
             this.couTeaDetails.Size = new System.Drawing.Size(365, 280);
             this.couTeaDetails.TabIndex = 47;
+            this.couTeaDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.couTeaDetails_CellClick);
+            this.couTeaDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.couTeaDetails_CellContentClick);
             // 
-            // clsDay
+            // clsDaycmb
             // 
-            this.clsDay.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.clsDay.FormattingEnabled = true;
-            this.clsDay.Location = new System.Drawing.Point(167, 139);
-            this.clsDay.Name = "clsDay";
-            this.clsDay.Size = new System.Drawing.Size(196, 26);
-            this.clsDay.TabIndex = 46;
+            this.clsDaycmb.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.clsDaycmb.FormattingEnabled = true;
+            this.clsDaycmb.Items.AddRange(new object[] {
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.clsDaycmb.Location = new System.Drawing.Point(167, 139);
+            this.clsDaycmb.Name = "clsDaycmb";
+            this.clsDaycmb.Size = new System.Drawing.Size(196, 26);
+            this.clsDaycmb.TabIndex = 46;
             // 
-            // clsID
+            // clsIDtxt
             // 
-            this.clsID.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.clsID.Location = new System.Drawing.Point(167, 23);
-            this.clsID.Name = "clsID";
-            this.clsID.Size = new System.Drawing.Size(75, 26);
-            this.clsID.TabIndex = 44;
+            this.clsIDtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.clsIDtxt.Location = new System.Drawing.Point(167, 23);
+            this.clsIDtxt.Name = "clsIDtxt";
+            this.clsIDtxt.Size = new System.Drawing.Size(75, 26);
+            this.clsIDtxt.TabIndex = 44;
             // 
             // button3
             // 
@@ -177,6 +209,7 @@
             this.button3.TabIndex = 43;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -206,21 +239,21 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // clsFee
+            // clsFeetxt
             // 
-            this.clsFee.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.clsFee.Location = new System.Drawing.Point(167, 251);
-            this.clsFee.Name = "clsFee";
-            this.clsFee.Size = new System.Drawing.Size(196, 26);
-            this.clsFee.TabIndex = 40;
+            this.clsFeetxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.clsFeetxt.Location = new System.Drawing.Point(167, 251);
+            this.clsFeetxt.Name = "clsFeetxt";
+            this.clsFeetxt.Size = new System.Drawing.Size(196, 26);
+            this.clsFeetxt.TabIndex = 40;
             // 
-            // clsBatch
+            // clsBatchtxt
             // 
-            this.clsBatch.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.clsBatch.Location = new System.Drawing.Point(167, 103);
-            this.clsBatch.Name = "clsBatch";
-            this.clsBatch.Size = new System.Drawing.Size(196, 26);
-            this.clsBatch.TabIndex = 37;
+            this.clsBatchtxt.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.clsBatchtxt.Location = new System.Drawing.Point(167, 103);
+            this.clsBatchtxt.Name = "clsBatchtxt";
+            this.clsBatchtxt.Size = new System.Drawing.Size(196, 26);
+            this.clsBatchtxt.TabIndex = 37;
             // 
             // label7
             // 
@@ -293,14 +326,14 @@
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
             this.tabPage2.Controls.Add(this.clsGridView);
             this.tabPage2.Controls.Add(this.clsAllRbn);
-            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.days);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.comboBox4);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 467);
+            this.tabPage2.Size = new System.Drawing.Size(829, 467);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Report";
             // 
@@ -326,14 +359,23 @@
             this.clsAllRbn.UseVisualStyleBackColor = true;
             this.clsAllRbn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // comboBox3
+            // days
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(516, 25);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 26);
-            this.comboBox3.TabIndex = 9;
+            this.days.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.days.FormattingEnabled = true;
+            this.days.Items.AddRange(new object[] {
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.days.Location = new System.Drawing.Point(516, 25);
+            this.days.Name = "days";
+            this.days.Size = new System.Drawing.Size(121, 26);
+            this.days.TabIndex = 9;
+            this.days.SelectedIndexChanged += new System.EventHandler(this.days_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -376,7 +418,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(809, 76);
+            this.panel1.Size = new System.Drawing.Size(859, 76);
             this.panel1.TabIndex = 2;
             // 
             // button10
@@ -384,7 +426,7 @@
             this.button10.BackColor = System.Drawing.Color.White;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(753, 17);
+            this.button10.Location = new System.Drawing.Point(798, 18);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(48, 41);
             this.button10.TabIndex = 29;
@@ -395,7 +437,7 @@
             this.button9.BackColor = System.Drawing.Color.White;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(699, 17);
+            this.button9.Location = new System.Drawing.Point(744, 18);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(48, 41);
             this.button9.TabIndex = 28;
@@ -406,7 +448,7 @@
             this.button8.BackColor = System.Drawing.Color.White;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(645, 17);
+            this.button8.Location = new System.Drawing.Point(690, 18);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(48, 41);
             this.button8.TabIndex = 27;
@@ -417,7 +459,7 @@
             this.button7.BackColor = System.Drawing.Color.White;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(587, 17);
+            this.button7.Location = new System.Drawing.Point(632, 18);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(48, 41);
             this.button7.TabIndex = 26;
@@ -434,31 +476,26 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Course";
             // 
-            // labe
+            // button4
             // 
-            this.labe.AutoSize = true;
-            this.labe.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.labe.ForeColor = System.Drawing.Color.White;
-            this.labe.Location = new System.Drawing.Point(24, 67);
-            this.labe.Name = "labe";
-            this.labe.Size = new System.Drawing.Size(95, 23);
-            this.labe.TabIndex = 51;
-            this.labe.Text = "Teacher ID";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.textBox1.Location = new System.Drawing.Point(167, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 26);
-            this.textBox1.TabIndex = 52;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(201)))), ((int)(((byte)(169)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(312, 23);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(111, 26);
+            this.button4.TabIndex = 53;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Course
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(807, 633);
+            this.ClientSize = new System.Drawing.Size(858, 633);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "Course";
@@ -481,13 +518,13 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox clsDay;
-        private System.Windows.Forms.TextBox clsID;
+        private System.Windows.Forms.ComboBox clsDaycmb;
+        private System.Windows.Forms.TextBox clsIDtxt;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox clsFee;
-        private System.Windows.Forms.TextBox clsBatch;
+        private System.Windows.Forms.TextBox clsFeetxt;
+        private System.Windows.Forms.TextBox clsBatchtxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -496,7 +533,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RadioButton clsAllRbn;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox days;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label9;
@@ -509,10 +546,11 @@
         private System.Windows.Forms.DataGridView clsGridView;
         private System.Windows.Forms.DataGridView couTeaDetails;
         private System.Windows.Forms.Label clsLastId;
-        private System.Windows.Forms.ComboBox clsEndTime;
-        private System.Windows.Forms.ComboBox clsStartTime;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox clsEndTimecmb;
+        private System.Windows.Forms.ComboBox clsStartTimecmb;
+        private System.Windows.Forms.TextBox teaIdSelectlbl;
         private System.Windows.Forms.Label labe;
+        private System.Windows.Forms.Button button4;
 
     }
 }

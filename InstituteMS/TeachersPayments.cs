@@ -18,7 +18,7 @@ namespace InstituteMS
         public int teaID;
         public string payType;
         public MySqlDataReader read;
-
+        public string command;
 
         public void MainPayments()
         {
@@ -48,33 +48,13 @@ namespace InstituteMS
         }
         public void ToInsPayments() {
         
-                db.cmd.CommandText = "INSERT INTO " + db.dbName + ".TeaToInstittute(teaPayID,amount,date) VALUES('" + teaPayID + "','" + amount + "','" + payDate + "')";
-                db.checkConn();
-                check = db.cmd.ExecuteNonQuery();
-                if (check == 1)
-                {
-                    MessageBox.Show("Saved");
-                }
-                else
-                {
-                    MessageBox.Show("Not saved");
-                }
-                db.checkConn();
+                command = "INSERT INTO " + db.dbName + ".TeaToInstittute(teaPayID,amount,date) VALUES('" + teaPayID + "','" + amount + "','" + paymentDate + "')";
+                db.DMLQuery(command, 1);
             
         }
         public void FromInsPayments(){
-            db.cmd.CommandText = "INSERT INTO " + db.dbName + ".TeaFromInstitute(teaPayID,amount,date) VALUES('" + teaPayID + "','" + amount + "','" + payDate + "')";
-            db.checkConn();
-            check = db.cmd.ExecuteNonQuery();
-            if (check == 1)
-            {
-                MessageBox.Show("Saved");
-            }
-            else
-            {
-                MessageBox.Show("Not saved");
-            }
-            db.checkConn();
+            command = "INSERT INTO " + db.dbName + ".TeaFromInstitute(teaPayID,amount,date) VALUES('" + teaPayID + "','" + amount + "','" + paymentDate + "')";
+            db.DMLQuery(command, 1);
         }
         public int checkCurrentPayments() {
            
@@ -95,10 +75,8 @@ namespace InstituteMS
 
         public void SaveTeaPayments() {
             int pid = GetLastPayments() + 1;
-            db.cmd.CommandText = "INSERT INTO " + db.dbName + ".TeachersPayments(teacpayid,month,year,teacID) VALUES('"+pid+"','"+month+"','"+year+"','"+teaID+"')";
-            db.checkConn();
-            db.cmd.ExecuteNonQuery();
-            db.checkConn();
+            command = "INSERT INTO " + db.dbName + ".TeachersPayments(teacpayid,month,year,teacID) VALUES('"+pid+"','"+month+"','"+year+"','"+teaID+"')";
+            db.DMLQuery(command, 1);
         
         }
         public int GetLastPayments() {
@@ -108,7 +86,7 @@ namespace InstituteMS
             db.checkConn();
             return maxPayID;
         }
-        public void SetValues(int teaID,string payType,int month,int year,float amount) {
+        public void SetValues(int teaID,string payType,string month,int year,float amount) {
             this.teaID = teaID;
             this.payType = payType;
             this.month = month;
