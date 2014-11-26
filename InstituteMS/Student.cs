@@ -31,7 +31,7 @@ namespace InstituteMS
             CamDevice();
             dategen();
             showstunewid();
-            fillallgrid();
+           // fillallgrid();
         }
         DBConnect db = new DBConnect();
         QrEncod encode = new QrEncod();
@@ -46,15 +46,15 @@ namespace InstituteMS
 
         public void showstunewid()
         {
-            db.GetLastID("SELECT MAX(stuID) FROM ims.student");
-            if (db.maxId == 0)
+            int id = db.GetLastID("SELECT MAX(stuID) FROM ims.student");
+            if (id == 0)
             {
-                db.maxId = 1;
+                id = 1;
             }
             else
             {
-                db.maxId += 1;
-                StuRid.Text = db.maxId.ToString();
+                id += 1;
+                StuRid.Text = id.ToString();
                 encode.SetData(StuRid.Text);
                 encode.Encoding();
                 StuRqrpic.Image=encode.GetImage();
@@ -288,18 +288,18 @@ namespace InstituteMS
 
         private void StuPsave_Click(object sender, EventArgs e)
         {
-            db.GetLastID("SELECT MAX(stuPayID) FROM ims.studentpayments");
-            if (db.maxId == 0)
+            int id = db.GetLastID("SELECT MAX(stuPayID) FROM ims.studentpayments");
+            if (id == 0)
             {
-                db.maxId = 1;
+                id = 1;
             }
             else
             {
-                db.maxId += 1;
+                id += 1;
                 string month = StuPmonth.SelectedValue.ToString();
                 int year = int.Parse(StuPyear.Text);
                 float amount = int.Parse(StuPfees.Text);
-                stupay.SetValues(db.maxId, month, year, amount);
+                stupay.SetValues(id, month, year, amount);
                 stupay.stuclassselect(StuPid.Text);
                 stupay.SaveStuPayments(int.Parse(StuPid.Text));
                 clearbox();
@@ -333,13 +333,13 @@ namespace InstituteMS
             } 
         }
 
-        public void fillallgrid()
-        {
-            stupay.fillgrid();
-            StuPgrid.DataSource = stupay.grid;
-            alstu.fillgrid();
-            StuRgridviwe.DataSource = alstu.grid;
-        }
+        //public void fillallgrid()
+        //{
+        //    stupay.fillgrid();
+        //    StuPgrid.DataSource = stupay.grid;
+        //    alstu.fillgrid();
+        //    StuRgridviwe.DataSource = alstu.grid;
+        //}
 
         private void StuPid_TextChanged(object sender, EventArgs e)
         {

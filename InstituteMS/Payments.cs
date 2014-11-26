@@ -11,21 +11,11 @@ namespace InstituteMS
     class Payments
     {
         public int payID;
-<<<<<<< HEAD
-        public int month;
-        public string Month;
-        public int year;
-        public string payDate;
-        public float amount;
-        public Image stuphoto;
-        public byte[] img;
-        public string data;
+        public string Month;   
+        public string payDate;               
         public string classid;
         public int max;
-        public string status;
-    
-
-=======
+        public string status;   
         public string month;
         public int year;
         public string paymentDate;
@@ -58,14 +48,18 @@ namespace InstituteMS
             }
         }
 
-        public string payDate {
-            get {
-                return this.paymentDate;
-            }
-            set {
-                paymentDate = value;
-            }
-        }
+        //public string payDate
+        //{
+        //    get
+        //    {
+        //        return this.paymentDate;
+        //    }
+        //    set
+        //    {
+        //        paymentDate = value;
+        //    }
+        //}
+
         public double payAmount {
             get {
                 return this.amount;
@@ -74,6 +68,6 @@ namespace InstituteMS
                 amount = value;
             }
         }
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
+
     }
 }

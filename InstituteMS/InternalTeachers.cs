@@ -35,42 +35,41 @@ namespace InstituteMS
         }
         public override void RegisterTeacher() {
 
-<<<<<<< HEAD
+
             //try
             //{
             //   command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + this.teaID + "','" + this.teaFName + "','" + this.teaLName + "','" + this.teaNIC + "','" + this.teaContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + this.teaEmail + "','" + this.teaSubject + "')";
             //   db.dmlQuery(command, 1);
             //}
             //catch { 
-=======
+
             try
             {
                 command = "INSERT INTO " + db.dbName + ".Teachers(teaID,fname,lname,nic,contact,address1,address2,address3,mail,subName) VALUES('" + teacId + "','" + teacFName + "','" + teacLName + "','" + teacNIC + "','" + teacContact + "','" + this.teaAdd1 + "','" + this.teaAdd2 + "','" + this.teaAdd3 + "','" + teacEmail + "','" + this.teaSubject + "')";
                db.DMLQuery(command, 1);
             }
             catch { 
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
+
             
-            //}
+            }
         }
         public override void ModifyTeacher() {
-<<<<<<< HEAD
+
             //try
             //{
             //   command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + this.teaID + "',fname='" + this.teaFName + "',lname='" + this.teaLName + "',nic='" + this.teaNIC + "',contact='" + this.teaContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + this.teaEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + this.teaID + "'";
             //   db.dmlQuery(command, 2);
             //}
             //catch { 
-=======
+
             try
             {
                command = "UPDATE " + db.dbName + ".Teachers SET teaID='" + teacId + "',fname='" + teacFName + "',lname='" + teacLName + "',nic='" + teacNIC + "',contact='" + teacContact + "',address1='" + this.teaAdd1 + "',address2='" + this.teaAdd2 + "',address3='" + this.teaAdd3 + "',mail='" + teacEmail + "',subName='" + this.teaSubject + "' WHERE teaID='" + teacId+ "'";
                db.DMLQuery(command, 2);
             }
             catch { 
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
-            
-            //}
+           
+            }
         }
         public void DeleteTeacher() { 
         
@@ -99,44 +98,41 @@ namespace InstituteMS
         }
        
 
-<<<<<<< HEAD
+
        // public DataTable ReportAllDetails()
       //  { 
       // //     command = "SELECT *FROM "+db.dbName+".Teachers";
       //   //   return db.tableResult(command);
-=======
+
         public DataTable ReportAllDetails()
         {
             command = "SELECT teaid,CONCAT(fname,' ',lname)AS Name ,nic ,contact , CONCAT(address1,' ,',address2,' ,',address3) As Address,mail As EMail,subname AS SubjectName FROM "+db.dbName+".Teachers";
             return db.TableResult(command);
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
-           
-      //  }
 
-<<<<<<< HEAD
+           
+        }
+
       ////  public DataTable ReportSubject(string subj) {
       ////      command = "SELECT *FROM " + db.dbName + ".Teachers WHERE subName='" +subj+ "'";
       //  //    return db.tableResult(command);
       //  }
-=======
         public DataTable ReportSubject(string subj) {
             command = "SELECT cls.classid,cls.day,cls.starttime,cls.endtime,cls.batch,cls.fee,CONCAT(tea.fname,' ',tea.lname)AS Name FROM " + db.dbName + ".Teachers tea," + db.dbName + ".class cls  WHERE subName='" + subj + "'";
             return db.TableResult(command);
         }
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
 
-      //  //public DataTable getTeachers()
-      // // {
 
-<<<<<<< HEAD
+      public DataTable getTeachers()
+       {
+
+
       // //     command = "SELECT teaid,fname,lname FROM " + db.dbName + ".Teachers ";
       //     // return db.tableResult(command);
      //   }
-=======
             command = "SELECT teaid As TeacherID,CONCAT(fname,' ',lname) As Name FROM " + db.dbName + ".Teachers ";
             return db.TableResult(command);
         }
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
+
 
         public int GetLastTeachersID() {
             try

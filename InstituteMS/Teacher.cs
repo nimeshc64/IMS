@@ -70,14 +70,11 @@ namespace InstituteMS
         }
         private void teaAllRbn_CheckedChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             InternalTeachers tr = new InternalTeachers();
           //  teaReportGrid.DataSource = tr.ReportAllDetails();
-=======
             InternalTeachers interteach = new InternalTeachers();
             teaReportGrid.DataSource = interteach.ReportAllDetails();
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
-            
+          
         }
 
         private void teaSubRbn_CheckedChanged(object sender, EventArgs e)
@@ -98,11 +95,11 @@ namespace InstituteMS
             }
             else
             {
-<<<<<<< HEAD
+
                 //teaReportGrid.DataSource = tea.ReportSubject(teaSubCombo.Text);
-=======
+
                 teaReportGrid.DataSource = interteach.ReportSubject(teaSubCombo.Text);
->>>>>>> 58dbdcbb69879679487c994fc900ee2a862ce14a
+
             }
         }
 

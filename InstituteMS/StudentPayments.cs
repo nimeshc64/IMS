@@ -18,6 +18,8 @@ namespace InstituteMS
         public MySqlDataReader read;
         public ArrayList list;
         public string command;
+        public byte[] img;
+        public Image stuphoto;
         public string stuclassselect(string stuid)
         {
             try
@@ -38,14 +40,14 @@ namespace InstituteMS
 
         public void SaveStuPayments(int stuid)
         {
-            //try
-            //{
-            //    command= "INSERT INTO " + db.dbName + ".studentpayments(stuPayID,month,year,amount,stuID,classID) VALUES('" + max + "','" + Month + "','" + year + "','" + amount + "','" +stuid + "','" +int.Parse(classid)+ "')";
-            //    db.dmlQuery(command, 1);
-            //}
-            //catch (Exception em)
-            //{
-            //}
+            try
+            {
+                command = "INSERT INTO " + db.dbName + ".studentpayments(stuPayID,month,year,amount,stuID,classID) VALUES('" + max + "','" + Month + "','" + year + "','" + amount + "','" + stuid + "','" + int.Parse(classid) + "')";
+                db.DMLQuery(command, 1);
+            }
+            catch (Exception em)
+            {
+            }
         }
         public void SetValues(int max, string Month, int year, float amount)
         {
@@ -117,13 +119,13 @@ namespace InstituteMS
             }
             return stuphoto;
         }
-        public DataGridView grid;
-        public DataGridView fillgrid()
-        {
-            db.TableResult("SELECT * FROM ims.studentpayments");
-            grid.DataSource = db.table;
-            return grid;
-        }
+        //public DataGridView grid;
+        //public DataGridView fillgrid()
+        //{
+        //    db.TableResult("SELECT * FROM ims.studentpayments");
+        //    grid.DataSource = db.table;
+        //    return grid;
+        //}
           
     }
 }
