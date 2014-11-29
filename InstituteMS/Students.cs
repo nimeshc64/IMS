@@ -10,6 +10,7 @@ namespace InstituteMS
      abstract class Students
     {
         public int StuID;
+        public int Classid;
         public string StuFName;
         public string StuLName;
         public string Stuadd1;
@@ -24,7 +25,7 @@ namespace InstituteMS
 
         abstract public void RegisterStudents();
         abstract public void ModifyStudents();
-        abstract public void DeleteStudents(string nom);
+        abstract public void DeleteStudents(int nom);
         
     }
 }

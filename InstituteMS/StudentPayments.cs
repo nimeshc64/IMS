@@ -24,15 +24,14 @@ namespace InstituteMS
         {
             try
             {
-                db.cmd.CommandText = "SELECT * FROM " + db.dbName + ".studentclass WHERE stuID='" + stuid + "'";
+                db.cmd.CommandText = "SELECT *FROM " + db.dbName + ".studentclass WHERE stuID='" + stuid + "'";
                 db.checkConn();
                 read = db.cmd.ExecuteReader();
                 read.Read();
                 classid = read["classID"].ToString();
             }
             catch (Exception em)
-            {
-                MessageBox.Show("errornnnn");
+            {              
             }
             db.checkConn();
             return classid;
@@ -57,24 +56,43 @@ namespace InstituteMS
             this.max=max;
 
         }
-        
-        public string stupaymentcheck(string stuid)
+        public string status="false";       
+        public string stupaymentcheck(string stuid,String classid)
         {
             try
             {
-                db.cmd.CommandText = "SELECT month FROM " + db.dbName + ".studentpayments WHERE stuID='" + stuid + "' AND month='" + DateTime.Now.Date.ToString("MMMM") +"'";
+                db.cmd.CommandText = "SELECT * FROM " + db.dbName + ".studentpayments WHERE stuID='" + stuid + "' AND month='" + DateTime.Now.Date.ToString("MMMM") +"' AND classID='"+classid+"'";
                 db.checkConn();
                 read = db.cmd.ExecuteReader();
-                status=read.Read().ToString();                
-               // status = read["month"].ToString();                
+                read.Read();                
+                status = read["month"].ToString(); 
+               
             }
             catch (Exception em)
             {
-              //  MessageBox.Show("error");
+               // MessageBox.Show(em.Message);
             }
             db.checkConn();
             return status;
             
+        }
+
+        public String classcheck(string stuid)
+        {
+            String classid=null;
+            try
+            {
+                db.cmd.CommandText = "select classID from" + db.dbName + ".studentclass where stuID='" + stuid + "'";
+                db.checkConn();
+                read = db.cmd.ExecuteReader();
+                classid = read.Read().ToString();
+                db.checkConn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return classid;
         }
         public ArrayList SearchStudents(string stuid)
         {

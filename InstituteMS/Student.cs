@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Imaging;
 using MySql.Data.MySqlClient;
 using System.IO;
-using System.Drawing;
+
 using AForge.Video.DirectShow;//web cam libry
 using AForge;//web cam libry
 using AForge.Video;//web cam libry
@@ -19,6 +19,10 @@ using ZXing.Common;
 using ZXing.Multi;
 using ZXing.Multi.QrCode;
 using System.Media;
+
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Runtime.InteropServices;
 
 
 namespace InstituteMS
@@ -31,6 +35,7 @@ namespace InstituteMS
             CamDevice();
             dategen();
             showstunewid();
+            Classdetail();
            // fillallgrid();
         }
         DBConnect db = new DBConnect();
@@ -47,23 +52,32 @@ namespace InstituteMS
         public void showstunewid()
         {
             int id = db.GetLastID("SELECT MAX(stuID) FROM ims.student");
-            if (id == 0)
+            if (id == null)
             {
                 id = 1;
             }
             else
             {
                 id += 1;
-                StuRid.Text = id.ToString();
-                encode.SetData(StuRid.Text);
+                label26.Text = id.ToString();
+                encode.SetData(label26.Text);
                 encode.Encoding();
                 StuRqrpic.Image=encode.GetImage();
             }
         }
+
+        public void Classdetail()
+        {
+            CommonClass commcls = new CommonClass();
+            StuRgridviwe.DataSource = commcls.ReportAllDetails();
+        }
+
         private void StuAprint_Click(object sender, EventArgs e)
         {
-          //ptineter//
+            //printer//
         }
+    
+
         private void StuAqrsave_Click(object sender, EventArgs e)
         {
             encode.SaveImageCapture(StuRqrpic.Image,StuRfname.Text);
@@ -82,7 +96,7 @@ namespace InstituteMS
         }
         public void setTextBoxValues()
         {
-            alstu.SetStudentValues(int.Parse(StuRid.Text), StuRfname.Text, StuRlname.Text, StuRadd1.Text, StuRadd2.Text, StuRadd3.Text, Gender, int.Parse(StuRcontact.Text),filename);
+            alstu.SetStudentValues(int.Parse(label26.Text), int.Parse(StuRclassid.Text), StuRfname.Text, StuRlname.Text, StuRadd1.Text, StuRadd2.Text, StuRadd3.Text, Gender, int.Parse(StuRcontact.Text), filename);
         }
         public void clearbox()
         {
@@ -132,7 +146,7 @@ namespace InstituteMS
 
         private void StuAdeletebtn_Click(object sender, EventArgs e)
         {
-            alstu.DeleteStudents(StuRid.Text);
+            alstu.DeleteStudents(Convert.ToInt16(StuRid.Text));
             showstunewid();
         }
         public string filename;
@@ -240,12 +254,13 @@ namespace InstituteMS
                     }
                     else
                     {
-                        StuAstuid.Text = result.ToString();               
-                        stupay.stupaymentcheck(StuAstuid.Text);
+                        StuAstuid.Text = result.ToString();
+                        StuAclassid.Text = stupay.stuclassselect(StuAstuid.Text);                        
                         alstu.studentimage(StuAstuid.Text);
                         StuAstupic.Image = alstu.picture;
-                      
-                        if (stupay.status == "True")
+                        string status = stupay.stupaymentcheck(StuAstuid.Text, StuAclassid.Text);
+
+                        if (status !="false")
                         {                          
                             StuAstatus.BackColor = Color.Green;
                             StuApaynow.Visible = false;
@@ -289,7 +304,7 @@ namespace InstituteMS
         private void StuPsave_Click(object sender, EventArgs e)
         {
             int id = db.GetLastID("SELECT MAX(stuPayID) FROM ims.studentpayments");
-            if (id == 0)
+            if (id ==null)
             {
                 id = 1;
             }
@@ -299,7 +314,9 @@ namespace InstituteMS
                 string month = StuPmonth.SelectedValue.ToString();
                 int year = int.Parse(StuPyear.Text);
                 float amount = int.Parse(StuPfees.Text);
+
                 stupay.SetValues(id, month, year, amount);
+
                 stupay.stuclassselect(StuPid.Text);
                 stupay.SaveStuPayments(int.Parse(StuPid.Text));
                 clearbox();
@@ -381,7 +398,21 @@ namespace InstituteMS
 
         private void Student_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'imsDataSet1.student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter1.Fill(this.imsDataSet1.student);
+            // TODO: This line of code loads data into the 'imsDataSet.student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.imsDataSet.student);
           
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

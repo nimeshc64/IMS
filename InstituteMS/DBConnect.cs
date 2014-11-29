@@ -37,6 +37,7 @@ namespace InstituteMS
             }
             
             int check;
+            private int maxId;
             public void DMLQuery(string query,int type) {
                 try
                 {
@@ -71,8 +72,8 @@ namespace InstituteMS
                     }
                 }
                 catch (MySqlException e) {
-                    if (e.Number != 2627) {
-
+                    if (e.Number != 2627)
+                    {
                         MessageBox.Show("You Haved Already Used This ID. Please Use anotherone");
                     }
                 }
@@ -101,14 +102,22 @@ namespace InstituteMS
 
                 return table;
             }
-
+          
          public int GetLastID(string query)
          {
-             cmd.CommandText = query;
-             checkConn();
-             int maxId = int.Parse(cmd.ExecuteScalar().ToString());
-             checkConn();
-             return maxId;
+             int maxId=0;
+             try
+             {
+                 cmd.CommandText = query;
+                 checkConn();
+                 maxId = int.Parse(cmd.ExecuteScalar().ToString());
+                 checkConn();
+             }
+             catch (Exception ex)
+             {
+                // MessageBox.Show(ex.Message);
+             }
+             return maxId;  
          }       
     }
 }

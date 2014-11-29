@@ -24,9 +24,10 @@ namespace InstituteMS
         public ArrayList list = new ArrayList();
         DBConnect db = new DBConnect();
 
-        public void SetStudentValues(int StuId, string StuFName, string StuLName, string StuAdd1, string StuAdd2, string StuAdd3, string StuGender, int Stucontact, string stuphoto)
+        public void SetStudentValues(int StuId,int Classid, string StuFName, string StuLName, string StuAdd1, string StuAdd2, string StuAdd3, string StuGender, int Stucontact, string stuphoto)
         {
             this.StuID = StuId;
+            this.Classid=Classid;
             this.StuFName = StuFName;
             this.StuLName = StuLName;
             this.Stuadd1 = StuAdd1;
@@ -45,9 +46,11 @@ namespace InstituteMS
                 FileStream fst = new FileStream(Stuphoto, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fst);
                 imagebt = br.ReadBytes((int)fst.Length);
-                db.DMLQuery("INSERT INTO " + db.dbName + ".student(stuID,fName,lName,address1,address2,address3,Gender,contact,photo) VALUES('" + this.StuID + "','" + this.StuFName + "','" + this.StuLName + "','" + this.Stuadd1 + "','" + this.Stuadd2 + "','" + this.Stuadd3 + "','" + this.Stugender + "','" + this.Stucontact + "',@img)", 1);             
-                db.cmd.Parameters.Add(new MySqlParameter("@img", imagebt));             
-                db.checkConn();               
+                db.cmd.Parameters.Add(new MySqlParameter("@img", imagebt));
+                db.DMLQuery("INSERT INTO " + db.dbName + ".student(stuID,fName,lName,address1,address2,address3,Gender,contact,photo) VALUES('" + this.StuID + "','" + this.StuFName + "','" + this.StuLName + "','" + this.Stuadd1 + "','" + this.Stuadd2 + "','" + this.Stuadd3 + "','" + this.Stugender + "','" + this.Stucontact + "',@img)", 1);            
+                
+                db.DMLQuery("INSERT INTO " + db.dbName + ".studentclass(stuID,classID) Values('" + this.StuID + "','" + this.Classid + "')", 1);
+                               
             }
             catch
             {
@@ -66,17 +69,24 @@ namespace InstituteMS
 
             //}
         }
-        public override void DeleteStudents(string nom)
+        public override void DeleteStudents(int nom)
         {
-            //try
-            //{
-            //   command= "DELETE FROM " + db.dbName + ".student WHERE stuID='" +nom+ "'";
-            //   db.dmlQuery(command, 3);
-            //}
-            //catch
-            //{
+            try
+            {
+                command = "DELETE FROM " + db.dbName + ".studentpayments WHERE stuID='" + nom + "'";
+                db.DMLQuery(command, 3);
 
-            //}
+                command = "DELETE FROM " + db.dbName + ".studentclass WHERE stuID='" + nom + "'";
+                db.DMLQuery(command, 3);
+       
+                command = "DELETE FROM " + db.dbName + ".student WHERE stuID='" + nom + "'";
+                db.DMLQuery(command, 3);
+                
+            }
+            catch
+            {
+
+            }
         }
         public ArrayList SearchStudents(string stuid)
         {

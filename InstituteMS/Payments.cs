@@ -15,7 +15,7 @@ namespace InstituteMS
         public string payDate;               
         public string classid;
         public int max;
-        public string status;   
+         
         public string month;
         public int year;
         public string paymentDate;

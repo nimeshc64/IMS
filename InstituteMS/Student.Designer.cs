@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -40,7 +43,6 @@
             this.StuRqrsave = new System.Windows.Forms.Button();
             this.StuRprint = new System.Windows.Forms.Button();
             this.StuRqrpic = new System.Windows.Forms.PictureBox();
-            this.StuRgridviwe = new System.Windows.Forms.DataGridView();
             this.StuRstupic = new System.Windows.Forms.PictureBox();
             this.StuRfemale = new System.Windows.Forms.RadioButton();
             this.StuRmale = new System.Windows.Forms.RadioButton();
@@ -69,7 +71,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.StuAcancel = new System.Windows.Forms.Button();
             this.StuApaynow = new System.Windows.Forms.Button();
-            this.StuAclass = new System.Windows.Forms.ComboBox();
             this.StuAstupic = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.StuPmonth = new System.Windows.Forms.ComboBox();
             this.StuPsave = new System.Windows.Forms.Button();
-            this.StuPgrid = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
             this.Stuppic = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -103,37 +103,54 @@
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.studentpaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      
             this.panel3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.StuAtimer = new System.Windows.Forms.Timer(this.components);
-            
             this.imsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentpaymentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.StuRclassid = new System.Windows.Forms.TextBox();
+            this.StuRgridviwe = new System.Windows.Forms.DataGridView();
+            this.StuAclassid = new System.Windows.Forms.TextBox();
+            this.imsDataSet = new InstituteMS.imsDataSet();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter = new InstituteMS.imsDataSetTableAdapters.studentTableAdapter();
+            this.stuIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imsDataSet1 = new InstituteMS.imsDataSet1();
+            this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter1 = new InstituteMS.imsDataSet1TableAdapters.studentTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StuRqrpic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StuRgridviwe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StuRstupic)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StuAstupic)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StuPgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Stuppic)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpaymentsBindingSource)).BeginInit();
-           
             this.panel3.SuspendLayout();
-       
             ((System.ComponentModel.ISupportInitialize)(this.imsDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpaymentsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRgridviwe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -163,6 +180,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.Controls.Add(this.StuRgridviwe);
+            this.tabPage1.Controls.Add(this.StuRclassid);
+            this.tabPage1.Controls.Add(this.label25);
+            this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label10);
@@ -170,7 +191,6 @@
             this.tabPage1.Controls.Add(this.StuRqrsave);
             this.tabPage1.Controls.Add(this.StuRprint);
             this.tabPage1.Controls.Add(this.StuRqrpic);
-            this.tabPage1.Controls.Add(this.StuRgridviwe);
             this.tabPage1.Controls.Add(this.StuRstupic);
             this.tabPage1.Controls.Add(this.StuRfemale);
             this.tabPage1.Controls.Add(this.StuRmale);
@@ -193,12 +213,14 @@
             this.tabPage1.Controls.Add(this.StuRfname);
             this.tabPage1.Controls.Add(this.StuRadd1);
             this.tabPage1.Controls.Add(this.StuRlname);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(917, 534);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label23
             // 
@@ -227,7 +249,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(205, 231);
+            this.label10.Location = new System.Drawing.Point(205, 273);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 18);
             this.label10.TabIndex = 51;
@@ -286,16 +308,6 @@
             this.StuRqrpic.TabStop = false;
             this.StuRqrpic.Click += new System.EventHandler(this.StuRqrpic_Click);
             // 
-            // StuRgridviwe
-            // 
-            this.StuRgridviwe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StuRgridviwe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StuRgridviwe.Location = new System.Drawing.Point(52, 309);
-            this.StuRgridviwe.Name = "StuRgridviwe";
-            this.StuRgridviwe.Size = new System.Drawing.Size(734, 171);
-            this.StuRgridviwe.TabIndex = 46;
-            this.StuRgridviwe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StuRgridviwe_CellContentClick);
-            // 
             // StuRstupic
             // 
             this.StuRstupic.Image = ((System.Drawing.Image)(resources.GetObject("StuRstupic.Image")));
@@ -310,7 +322,7 @@
             // 
             this.StuRfemale.AutoSize = true;
             this.StuRfemale.ForeColor = System.Drawing.Color.White;
-            this.StuRfemale.Location = new System.Drawing.Point(254, 261);
+            this.StuRfemale.Location = new System.Drawing.Point(254, 303);
             this.StuRfemale.Name = "StuRfemale";
             this.StuRfemale.Size = new System.Drawing.Size(78, 27);
             this.StuRfemale.TabIndex = 44;
@@ -322,7 +334,7 @@
             // 
             this.StuRmale.AutoSize = true;
             this.StuRmale.ForeColor = System.Drawing.Color.White;
-            this.StuRmale.Location = new System.Drawing.Point(150, 261);
+            this.StuRmale.Location = new System.Drawing.Point(150, 303);
             this.StuRmale.Name = "StuRmale";
             this.StuRmale.Size = new System.Drawing.Size(64, 27);
             this.StuRmale.TabIndex = 43;
@@ -335,7 +347,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 63);
+            this.label2.Location = new System.Drawing.Point(33, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 25;
@@ -371,7 +383,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 97);
+            this.label3.Location = new System.Drawing.Point(33, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 26;
@@ -382,7 +394,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(32, 129);
+            this.label4.Location = new System.Drawing.Point(32, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 23);
             this.label4.TabIndex = 27;
@@ -407,7 +419,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 228);
+            this.label5.Location = new System.Drawing.Point(32, 270);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 23);
             this.label5.TabIndex = 28;
@@ -432,7 +444,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(28, 161);
+            this.label6.Location = new System.Drawing.Point(28, 203);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 23);
             this.label6.TabIndex = 29;
@@ -457,7 +469,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(28, 194);
+            this.label7.Location = new System.Drawing.Point(28, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 23);
             this.label7.TabIndex = 30;
@@ -466,7 +478,7 @@
             // StuRcontact
             // 
             this.StuRcontact.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRcontact.Location = new System.Drawing.Point(246, 223);
+            this.StuRcontact.Location = new System.Drawing.Point(246, 265);
             this.StuRcontact.MaxLength = 9;
             this.StuRcontact.Name = "StuRcontact";
             this.StuRcontact.Size = new System.Drawing.Size(87, 26);
@@ -479,7 +491,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(33, 261);
+            this.label8.Location = new System.Drawing.Point(33, 303);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 23);
             this.label8.TabIndex = 31;
@@ -488,7 +500,7 @@
             // StuRadd3
             // 
             this.StuRadd3.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRadd3.Location = new System.Drawing.Point(149, 191);
+            this.StuRadd3.Location = new System.Drawing.Point(149, 233);
             this.StuRadd3.MaxLength = 20;
             this.StuRadd3.Name = "StuRadd3";
             this.StuRadd3.Size = new System.Drawing.Size(183, 26);
@@ -497,16 +509,17 @@
             // StuRid
             // 
             this.StuRid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRid.Location = new System.Drawing.Point(149, 16);
+            this.StuRid.Location = new System.Drawing.Point(202, 13);
+            this.StuRid.Multiline = true;
             this.StuRid.Name = "StuRid";
-            this.StuRid.Size = new System.Drawing.Size(59, 26);
+            this.StuRid.Size = new System.Drawing.Size(46, 32);
             this.StuRid.TabIndex = 32;
             this.StuRid.TextChanged += new System.EventHandler(this.StuAid_TextChanged);
             // 
             // StuRadd2
             // 
             this.StuRadd2.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRadd2.Location = new System.Drawing.Point(149, 158);
+            this.StuRadd2.Location = new System.Drawing.Point(149, 200);
             this.StuRadd2.MaxLength = 30;
             this.StuRadd2.Name = "StuRadd2";
             this.StuRadd2.Size = new System.Drawing.Size(183, 26);
@@ -515,7 +528,7 @@
             // StuRfname
             // 
             this.StuRfname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRfname.Location = new System.Drawing.Point(150, 62);
+            this.StuRfname.Location = new System.Drawing.Point(150, 104);
             this.StuRfname.MaxLength = 20;
             this.StuRfname.Name = "StuRfname";
             this.StuRfname.Size = new System.Drawing.Size(183, 26);
@@ -524,7 +537,7 @@
             // StuRadd1
             // 
             this.StuRadd1.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRadd1.Location = new System.Drawing.Point(150, 126);
+            this.StuRadd1.Location = new System.Drawing.Point(150, 168);
             this.StuRadd1.MaxLength = 20;
             this.StuRadd1.Name = "StuRadd1";
             this.StuRadd1.Size = new System.Drawing.Size(183, 26);
@@ -533,7 +546,7 @@
             // StuRlname
             // 
             this.StuRlname.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuRlname.Location = new System.Drawing.Point(149, 94);
+            this.StuRlname.Location = new System.Drawing.Point(149, 136);
             this.StuRlname.MaxLength = 20;
             this.StuRlname.Name = "StuRlname";
             this.StuRlname.Size = new System.Drawing.Size(183, 26);
@@ -563,10 +576,10 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.StuAclassid);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.StuAcancel);
             this.panel2.Controls.Add(this.StuApaynow);
-            this.panel2.Controls.Add(this.StuAclass);
             this.panel2.Controls.Add(this.StuAstupic);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
@@ -612,15 +625,6 @@
             this.StuApaynow.UseVisualStyleBackColor = true;
             this.StuApaynow.Visible = false;
             this.StuApaynow.Click += new System.EventHandler(this.StuApaynow_Click);
-            // 
-            // StuAclass
-            // 
-            this.StuAclass.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.StuAclass.FormattingEnabled = true;
-            this.StuAclass.Location = new System.Drawing.Point(154, 84);
-            this.StuAclass.Name = "StuAclass";
-            this.StuAclass.Size = new System.Drawing.Size(138, 26);
-            this.StuAclass.TabIndex = 8;
             // 
             // StuAstupic
             // 
@@ -754,7 +758,6 @@
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.StuPmonth);
             this.tabPage3.Controls.Add(this.StuPsave);
-            this.tabPage3.Controls.Add(this.StuPgrid);
             this.tabPage3.Controls.Add(this.label22);
             this.tabPage3.Controls.Add(this.Stuppic);
             this.tabPage3.Controls.Add(this.label21);
@@ -827,20 +830,6 @@
             this.StuPsave.Text = "Save";
             this.StuPsave.UseVisualStyleBackColor = false;
             this.StuPsave.Click += new System.EventHandler(this.StuPsave_Click);
-            // 
-            // StuPgrid
-            // 
-            this.StuPgrid.AllowUserToAddRows = false;
-            this.StuPgrid.AllowUserToDeleteRows = false;
-            this.StuPgrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StuPgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StuPgrid.Location = new System.Drawing.Point(100, 288);
-            this.StuPgrid.Name = "StuPgrid";
-            this.StuPgrid.ReadOnly = true;
-            this.StuPgrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.StuPgrid.Size = new System.Drawing.Size(655, 171);
-            this.StuPgrid.StandardTab = true;
-            this.StuPgrid.TabIndex = 48;
             // 
             // label22
             // 
@@ -948,10 +937,21 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 75);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stuIDDataGridViewTextBoxColumn,
+            this.fNameDataGridViewTextBoxColumn,
+            this.lNameDataGridViewTextBoxColumn,
+            this.address1DataGridViewTextBoxColumn,
+            this.address2DataGridViewTextBoxColumn,
+            this.address3DataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.contactDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(55, 128);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(893, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(849, 326);
             this.dataGridView1.TabIndex = 9;
             // 
             // label17
@@ -977,12 +977,6 @@
             // studentpaymentsBindingSource
             // 
             this.studentpaymentsBindingSource.DataMember = "studentpayments";
-         //   this.studentpaymentsBindingSource.DataSource = this.imsDataSet;
-            // 
-            // imsDataSet
-            // 
-       //     this.imsDataSet.DataSetName = "imsDataSet";
-       //     this.imsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -1046,8 +1040,153 @@
             this.StuAtimer.Interval = 300;
             this.StuAtimer.Tick += new System.EventHandler(this.StuAtimer_Tick);
             // 
-            // studentpaymentsTableAdapter
-        
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(150, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(52, 32);
+            this.label26.TabIndex = 55;
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(33, 72);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(73, 23);
+            this.label25.TabIndex = 56;
+            this.label25.Text = "Class ID";
+            // 
+            // StuRclassid
+            // 
+            this.StuRclassid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuRclassid.Location = new System.Drawing.Point(150, 68);
+            this.StuRclassid.Name = "StuRclassid";
+            this.StuRclassid.Size = new System.Drawing.Size(64, 26);
+            this.StuRclassid.TabIndex = 57;
+            this.StuRclassid.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // StuRgridviwe
+            // 
+            this.StuRgridviwe.AllowUserToAddRows = false;
+            this.StuRgridviwe.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            this.StuRgridviwe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.StuRgridviwe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StuRgridviwe.Location = new System.Drawing.Point(32, 348);
+            this.StuRgridviwe.Name = "StuRgridviwe";
+            this.StuRgridviwe.ReadOnly = true;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StuRgridviwe.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            this.StuRgridviwe.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.StuRgridviwe.Size = new System.Drawing.Size(835, 111);
+            this.StuRgridviwe.TabIndex = 58;
+            // 
+            // StuAclassid
+            // 
+            this.StuAclassid.Enabled = false;
+            this.StuAclassid.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.StuAclassid.Location = new System.Drawing.Point(155, 80);
+            this.StuAclassid.Name = "StuAclassid";
+            this.StuAclassid.Size = new System.Drawing.Size(138, 26);
+            this.StuAclassid.TabIndex = 14;
+            // 
+            // imsDataSet
+            // 
+            this.imsDataSet.DataSetName = "imsDataSet";
+            this.imsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.imsDataSet;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
+            // stuIDDataGridViewTextBoxColumn
+            // 
+            this.stuIDDataGridViewTextBoxColumn.DataPropertyName = "stuID";
+            this.stuIDDataGridViewTextBoxColumn.HeaderText = "stuID";
+            this.stuIDDataGridViewTextBoxColumn.Name = "stuIDDataGridViewTextBoxColumn";
+            // 
+            // fNameDataGridViewTextBoxColumn
+            // 
+            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "fName";
+            this.fNameDataGridViewTextBoxColumn.HeaderText = "fName";
+            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            // 
+            // lNameDataGridViewTextBoxColumn
+            // 
+            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "lName";
+            this.lNameDataGridViewTextBoxColumn.HeaderText = "lName";
+            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            // 
+            // address1DataGridViewTextBoxColumn
+            // 
+            this.address1DataGridViewTextBoxColumn.DataPropertyName = "address1";
+            this.address1DataGridViewTextBoxColumn.HeaderText = "address1";
+            this.address1DataGridViewTextBoxColumn.Name = "address1DataGridViewTextBoxColumn";
+            // 
+            // address2DataGridViewTextBoxColumn
+            // 
+            this.address2DataGridViewTextBoxColumn.DataPropertyName = "address2";
+            this.address2DataGridViewTextBoxColumn.HeaderText = "address2";
+            this.address2DataGridViewTextBoxColumn.Name = "address2DataGridViewTextBoxColumn";
+            // 
+            // address3DataGridViewTextBoxColumn
+            // 
+            this.address3DataGridViewTextBoxColumn.DataPropertyName = "address3";
+            this.address3DataGridViewTextBoxColumn.HeaderText = "address3";
+            this.address3DataGridViewTextBoxColumn.Name = "address3DataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // contactDataGridViewTextBoxColumn
+            // 
+            this.contactDataGridViewTextBoxColumn.DataPropertyName = "contact";
+            this.contactDataGridViewTextBoxColumn.HeaderText = "contact";
+            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
+            // 
+            // imsDataSet1
+            // 
+            this.imsDataSet1.DataSetName = "imsDataSet1";
+            this.imsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource1
+            // 
+            this.studentBindingSource1.DataMember = "student";
+            this.studentBindingSource1.DataSource = this.imsDataSet1;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1057,14 +1196,13 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tabControl1);
             this.Name = "Student";
-            this.Text = "stuRegister";
+            this.Text = "Student";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Student_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StuRqrpic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StuRgridviwe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StuRstupic)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1074,18 +1212,20 @@
             this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StuPgrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Stuppic)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpaymentsBindingSource)).EndInit();
-       //     ((System.ComponentModel.ISupportInitialize)(this.imsDataSet)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-         //   ((System.ComponentModel.ISupportInitialize)(this.imsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imsDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpaymentsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StuRgridviwe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1118,7 +1258,6 @@
         private System.Windows.Forms.TextBox StuRlname;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox StuAclass;
         private System.Windows.Forms.PictureBox StuAstupic;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -1145,13 +1284,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox StuPid;
         private System.Windows.Forms.TextBox StuPyear;
-        private System.Windows.Forms.DataGridView StuRgridviwe;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox StuPfees;
         private System.Windows.Forms.PictureBox Stuppic;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox StuPname;
-        private System.Windows.Forms.DataGridView StuPgrid;
         private System.Windows.Forms.Button StuPsave;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ComboBox StuPmonth;
@@ -1173,6 +1310,25 @@
         private System.Windows.Forms.BindingSource studentpaymentsBindingSource;   
         private System.Windows.Forms.BindingSource imsDataSet1BindingSource;
         private System.Windows.Forms.BindingSource studentpaymentsBindingSource1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox StuRclassid;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView StuRgridviwe;
+        private System.Windows.Forms.TextBox StuAclassid;
+        private imsDataSet imsDataSet;
+        private System.Windows.Forms.BindingSource studentBindingSource;
+        private imsDataSetTableAdapters.studentTableAdapter studentTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
+        private imsDataSet1 imsDataSet1;
+        private System.Windows.Forms.BindingSource studentBindingSource1;
+        private imsDataSet1TableAdapters.studentTableAdapter studentTableAdapter1;
     
     }
 }
